@@ -1,0 +1,26 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-011",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [],
+    "expected_bundle_status": "BUNDLE_INCOMPLETE",
+    "has_conflicting_clauses": false,
+    "independent_amount": null,
+    "minimum_transfer_amount": null,
+    "missing_incorporated_document": true,
+    "mta_currency": null,
+    "notes": "'Confirmation Annex A' is declared incorporated by reference but never supplied; the bundle cannot become analyzable (plan Section 10.1/10.2) and every material term is None, not a best-effort guess.",
+    "notification_deadline_business_days": null,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": null,
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": null,
+    "threshold_counterparty": null,
+    "threshold_currency": null,
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "5399120885c48450134879243e39014c99ebcb221dcc2c26b57a4f4a64298ab0"
+}

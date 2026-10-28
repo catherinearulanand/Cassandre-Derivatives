@@ -1,0 +1,50 @@
+{
+  "$defs": {
+    "PriceBasis": {
+      "enum": [
+        "clean",
+        "dirty",
+        "cash",
+        "market_value"
+      ],
+      "title": "PriceBasis",
+      "type": "string"
+    }
+  },
+  "$id": "https://cassandre.sim/schemas/public/price.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "amount": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Amount"
+    },
+    "as_of": {
+      "format": "date-time",
+      "title": "As Of",
+      "type": "string"
+    },
+    "price_basis": {
+      "$ref": "#/$defs/PriceBasis"
+    },
+    "quote_currency": {
+      "title": "Quote Currency",
+      "type": "string"
+    }
+  },
+  "required": [
+    "amount",
+    "quote_currency",
+    "price_basis",
+    "as_of"
+  ],
+  "title": "Price",
+  "type": "object"
+}

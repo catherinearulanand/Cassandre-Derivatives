@@ -1,0 +1,29 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-003",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD",
+      "US_TREASURY"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "Party A and Party B thresholds must never be swapped or averaged; each is a distinct typed field.",
+    "notification_deadline_business_days": 2,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": "1000000.00",
+    "threshold_counterparty": "250000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "d1c4911a50b0efabb7f212cf7b50f0635f0961c103016a685351ada52f671548"
+}

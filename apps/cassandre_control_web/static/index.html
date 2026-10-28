@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cassandre Control UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cassandre control &mdash; federation layer</h1>
+    <p>Validates and correlates signed envelopes from ClauseOS / RiskOS / CollateralOS. Imports nothing from those
+      products (plan Section 3.4, AET-006). Synthetic SIM-* data only.</p>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="trust-keys" class="active">Trust keys</button>
+    <button data-tab="envelope">Envelope submission</button>
+    <button data-tab="correlated-case">Correlated case</button>
+    <button data-tab="audit-export">Federated audit export</button>
+  </nav>
+
+  <main>
+
+    <!-- ============================== TRUST KEYS ============================== -->
+    <section class="panel active" id="panel-trust-keys">
+      <h2>Trust-key registration / revocation</h2>
+      <div class="note">
+        Cassandre verifies every incoming envelope's Ed25519 signature against this registry
+        (<code>TrustRegistry</code>). There is no key-listing endpoint on the API, so the table below is a
+        session-local log of keys this browser has registered/revoked, not the server's full registry.
+      </div>
+      <form id="form-register-key">
+        <label>Key ID <input name="key_id" placeholder="clauseos-signing-key-1" required /></label>
+        <label>Public key (base64) <input name="public_key_b64" placeholder="base64-encoded Ed25519 public key" required /></label>
+        <button class="action" type="submit">POST /v1/trust-keys</button>
+      </form>
+      <div id="result-register-key" class="result-box" hidden></div>
+
+      <form id="form-revoke-key">
+        <label>Key ID to revoke <input name="key_id" placeholder="clauseos-signing-key-1" required /></label>
+        <button class="action secondary" type="submit">POST /v1/trust-keys/&#123;key_id&#125;:revoke</button>
+      </form>
+      <div id="result-revoke-key" class="result-box" hidden></div>
+
+      <table id="table-keys">
+        <thead><tr><th>key_id</th><th>action</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== ENVELOPE SUBMISSION ============================== -->
+    <section class="panel" id="panel-envelope">
+      <h2>Envelope submission</h2>
+      <div class="note">
+        Paste or upload a signed <code>cassandre_contracts.Envelope</code> JSON document. On rejection, every exact
+        failure reason from <code>verify_envelope</code>'s closed set is shown (e.g. <code>CONTENT_HASH_MISMATCH</code>,
+        <code>UNKNOWN_OR_REVOKED_KEY_ID</code>, <code>SIGNATURE_INVALID</code>, <code>MISSING_SIGNATURE</code>,
+        <code>AUDIENCE_MISMATCH</code>, <code>PURPOSE_NOT_PERMITTED</code>, <code>STALE</code>,
+        <code>AUTHORITY_STATUS_NOT_PERMITTED</code>) &mdash; never collapsed to a generic "error".
+      </div>
+      <div class="row-actions">
+        <label style="flex-direction:row;align-items:center;gap:6px;">
+          <span>Upload envelope JSON file:</span>
+          <input type="file" id="file-envelope" accept="application/json,.json" />
+        </label>
+      </div>
+      <form id="form-submit-envelope" class="wide">
+        <label>Envelope JSON
+          <textarea name="envelope_json" placeholder='{"schema_name": "...", "signature": {...}, ...}' required></textarea>
+        </label>
+        <button class="action" type="submit">POST /v1/envelopes:submit</button>
+      </form>
+      <div id="result-envelope"></div>
+    </section>
+
+    <!-- ============================== CORRELATED CASE ============================== -->
+    <section class="panel" id="panel-correlated-case">
+      <h2>Correlated case view</h2>
+      <div class="note">
+        Look up a case by its correlation key (each envelope's <code>simulation_provenance.scenario_id</code>).
+        Shows which of ClauseOS / RiskOS / CollateralOS have submitted an accepted envelope for that case, and
+        whether it is cross-product complete (all three present).
+      </div>
+      <form id="form-correlated-case">
+        <label>Correlation key / scenario_id <input name="correlation_key" placeholder="SIM-SCEN-0001" required /></label>
+        <button class="action" type="submit">GET /v1/correlated-cases/&#123;key&#125;</button>
+      </form>
+      <div id="result-correlated-case"></div>
+    </section>
+
+    <!-- ============================== FEDERATED AUDIT EXPORT ============================== -->
+    <section class="panel" id="panel-audit-export">
+      <h2>Federated audit export</h2>
+      <div class="note">
+        Assembles a read-only bundle from already-verified envelope receipts for one correlation key (plan
+        Section 3.4: "assemble a federated audit bundle"). Rendered as a table by default; toggle raw JSON below.
+      </div>
+      <form id="form-audit-export">
+        <label>Correlation key / scenario_id <input name="correlation_key" placeholder="SIM-SCEN-0001" required /></label>
+        <button class="action" type="submit">GET .../federated-audit-export</button>
+      </form>
+      <div id="result-audit-export"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

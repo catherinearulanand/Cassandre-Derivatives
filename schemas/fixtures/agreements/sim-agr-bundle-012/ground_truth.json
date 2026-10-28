@@ -1,0 +1,30 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-012",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD",
+      "US_TREASURY",
+      "CORPORATE_BOND"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "Wrong-way exclusion and a 25% single-issuer-group concentration cap are both deterministic approved mappings, not a market-correlation inference (plan Section 12.3).",
+    "notification_deadline_business_days": 2,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": "500000.00",
+    "threshold_counterparty": "500000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": true
+  },
+  "ground_truth_content_hash": "595f806d3d2de3a632976b5d583cc555bd453dfb3f660d6b2054f8182ec5adab"
+}

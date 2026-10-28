@@ -1,0 +1,1418 @@
+{
+  "schema": "cassandre.security-evidence.v1",
+  "release_digest": "sha256:s1-security-component-2026-09-15",
+  "source_revision": "working-tree",
+  "environment_profile": "S1_SYNTHETIC",
+  "scope": [
+    "packages/cassandre_security",
+    "products/clauseos/tests/test_security_integration.py",
+    "products/riskos/tests/test_security_integration.py",
+    "products/collateralos/tests/test_security_authorization.py",
+    "products/collateralos/tests/test_security_revocation_fence.py",
+    "products/collateralos/tests/test_security_evidence_v2.py"
+  ],
+  "test_results": [
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_blocker_covered_when_all_its_controls_have_a_passing_test",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_blocker_not_covered_if_its_test_failed",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_blocker_not_covered_if_no_test_at_all",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_blockers_with_no_mapped_controls_are_always_reported_false_not_omitted",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_every_hard_blocker_from_the_spec_is_present_in_the_table",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_control_map_only_maps_to_known_sec_ids",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_acceptance::test_report_as_dict_summary_counts_are_correct",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_allowed_request_with_correct_role_and_current_revocation",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_unknown_action_denied_deny_by_default",
+      "control_ids": [
+        "SEC-04"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_missing_role_denied",
+      "control_ids": [
+        "SEC-04"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_stale_policy_digest_denied",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_expired_session_denied",
+      "control_ids": [
+        "SEC-04"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_revoked_actor_denied_even_with_correct_role",
+      "control_ids": [
+        "SEC-04",
+        "SEC-14"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_missing_scope_denied",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_decision_is_deterministic_for_identical_inputs",
+      "control_ids": [
+        "SEC-04"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_authorization::test_client_supplied_tenant_cannot_forge_allow_for_a_different_tenant",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_build_coherent_recovery_set_succeeds_with_valid_inputs",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_build_coherent_recovery_set_rejects_empty_snapshots",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_build_coherent_recovery_set_rejects_inverted_write_pause_window",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_build_coherent_recovery_set_rejects_snapshot_taken_outside_pause_window",
+      "control_ids": [
+        "SEC-19"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_manifest_digest_is_deterministic_regardless_of_dict_insertion_order",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_ready_to_reopen_only_when_everything_checks_out",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_blocks_reopen_if_any_single_check_fails[current_revocations_known]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_blocks_reopen_if_any_single_check_fails[current_tombstones_applied]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_blocks_reopen_if_any_single_check_fails[current_minimum_policy_epoch_known]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_blocks_reopen_if_any_single_check_fails[witness_checkpoints_verified]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore::test_quarantine_verification_blocks_reopen_if_any_single_check_fails[reconciled_domain_state]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore_integration::test_real_snapshot_and_quarantine_restore_produces_matching_row_counts[clauseos]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 3.589
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_backup_restore_integration::test_real_snapshot_and_quarantine_restore_produces_matching_row_counts[riskos]",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 3.399
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_seal_and_verify_round_trip",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_wrong_public_key_fails_verification",
+      "control_ids": [
+        "SEC-10"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_mutated_body_field_invalidates_signature",
+      "control_ids": [
+        "SEC-10"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_stripped_signature_fails_closed",
+      "control_ids": [
+        "SEC-10"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_expired_validity_interval_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_not_yet_valid_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_local_trusted_policy_can_require_an_algorithm_the_payload_lacks",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_duplicate_algorithm_in_signature_suite_rejected_at_build_time",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_signature_map_must_exactly_match_declared_suite",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_verify_evidence_with_payload_catches_substituted_payload",
+      "control_ids": [
+        "SEC-10"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_verify_evidence_without_payload_still_verifies_signature_only",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_hybrid_dual_signature_seal_and_verify_round_trip",
+      "control_ids": [
+        "SEC-13"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.088
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_hybrid_profile_rejects_stripped_ml_dsa_signature",
+      "control_ids": [
+        "SEC-13"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.01
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_hybrid_profile_rejects_wrong_ml_dsa_key",
+      "control_ids": [
+        "SEC-13"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.028
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_existing_classical_only_default_is_unaffected_by_pqc_addition",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_seal_evidence_rejects_mismatched_keypair_and_declared_suite",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.01
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_canonical_evidence::test_v1_and_v2_profiles_use_different_domain_tags_and_digest_algorithms",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_highest_picks_most_sensitive",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_require_synthetic_provenance_accepts_valid",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_require_synthetic_provenance_rejects_missing",
+      "control_ids": [
+        "SEC-02"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_require_synthetic_provenance_rejects_empty_scenario_id",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_declassify_without_approval_fails_closed_to_highest_input",
+      "control_ids": [
+        "SEC-02"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_declassify_with_valid_distinct_approvers_succeeds",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_declassify_rejects_same_person_as_both_approvers",
+      "control_ids": [
+        "SEC-02",
+        "SEC-05"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_classification::test_declassify_raising_sensitivity_needs_no_approval",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_db_lockdown::test_generate_lockdown_sql_shape",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_db_lockdown::test_generate_lockdown_sql_requires_at_least_one_table",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_db_lockdown::test_real_postgres_lockdown_actually_removes_direct_dml",
+      "control_ids": [
+        "SEC-15"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.069
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_seal_and_open_round_trip",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_two_seals_of_the_same_plaintext_use_different_nonces_and_ciphertexts",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_tampered_ciphertext_is_rejected",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_wrong_context_object_version_is_rejected_as_tamper",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_wrong_context_tenant_and_object_swap_is_rejected",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_unsupported_cipher_profile_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_unsupported_schema_version_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_malformed_base64_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_unknown_wrap_key_version_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_tampered_wrapped_dek_rejected",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_envelope::test_wrong_custody_adapter_cannot_unwrap_another_adapters_dek",
+      "control_ids": [
+        "SEC-08"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_roles_reject_commander_as_own_resumption_checker",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_declare_incident_starts_in_lockdown",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_no_capability_is_permitted_during_lockdown",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_normal_state_permits_everything",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_no_degraded_state_other_than_normal_permits_new_publish",
+      "control_ids": [
+        "SEC-20"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_assert_capability_permitted_raises_when_denied",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_phases_must_advance_in_order_no_skipping",
+      "control_ids": [
+        "SEC-20"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_full_phase_sequence_walks_through_in_order",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_close_incident_requires_independent_checker_not_commander",
+      "control_ids": [
+        "SEC-20"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_incident_response::test_all_five_incident_types_are_distinct_enum_members",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_split_and_reconstruct_with_exact_threshold",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.037
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_below_threshold_shares_fail_closed",
+      "control_ids": [
+        "SEC-09"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.017
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_any_two_of_three_shares_work_not_just_the_first_two",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.061
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_invalid_threshold_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_wrong_secret_length_rejected",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_start_ceremony_requires_minimum_participants",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_start_ceremony_requires_verified_identity",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_start_ceremony_requires_distinct_persons",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_complete_ceremony_requires_verifier_to_be_a_participant",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_complete_ceremony_success",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_cannot_complete_an_already_completed_ceremony",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_synthetic_recovery_drill_covers_all_required_scenarios",
+      "control_ids": [
+        "SEC-09"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.05
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_ceremony::test_corrupt_share_is_rejected_not_silently_accepted",
+      "control_ids": [
+        "SEC-09"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.025
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_pending_to_active_sets_activated_at",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_active_key_may_encrypt_and_sign",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_pending_key_may_not_encrypt",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_decrypt_only_key_may_not_encrypt_new_but_may_decrypt_historical",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_compromised_key_may_not_decrypt_or_encrypt",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_destroyed_key_cannot_transition_anywhere",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_illegal_transition_pending_directly_to_compromised_is_still_allowed_only_via_active",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_key_lifecycle::test_suspended_key_can_be_reactivated",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_distinct_actors_pass",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_same_actor_as_maker_and_checker_rejected",
+      "control_ids": [
+        "SEC-05"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_distinct_account_ids_same_natural_person_rejected",
+      "control_ids": [
+        "SEC-05"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_independent_dual_approval_succeeds_with_two_distinct_non_requester_approvers",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_independent_dual_approval_rejects_requester_as_approver",
+      "control_ids": [
+        "SEC-05",
+        "SEC-18"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_independent_dual_approval_rejects_same_approver_twice",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_maker_checker::test_independent_dual_approval_rejects_two_aliases_of_the_same_person",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mlkem_keypair_sizes_match_fips_203_table",
+      "control_ids": [
+        "SEC-11"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.005
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_keypair_public_key_size_matches_fips_204_table",
+      "control_ids": [
+        "SEC-11"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_kem_encapsulate_decapsulate_round_trip",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.012
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_kem_decapsulate_with_wrong_private_key_yields_different_secret_not_an_exception",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.017
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_kem_decapsulate_rejects_malformed_ciphertext_length",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.009
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_kem_decapsulate_rejects_malformed_base64",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_sign_and_verify_round_trip",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.022
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_verify_fails_for_wrong_public_key",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.028
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_verify_fails_for_tampered_message",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.013
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_verify_fails_for_tampered_signature",
+      "control_ids": [
+        "SEC-13"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.01
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_mldsa_domain_separation_prevents_cross_protocol_replay",
+      "control_ids": [
+        "SEC-13"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.009
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_malformed_base64_inputs_to_verify_fail_closed_not_raise",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.01
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_pqc::test_crypto_capability_report_reports_expected_algorithms",
+      "control_ids": [
+        "SEC-11"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.073
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_admit_release_requires_two_independent_approvers",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_admit_release_rejects_single_approver",
+      "control_ids": [
+        "SEC-18"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_admit_release_rejects_requester_as_approver",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_verify_activation_succeeds_when_everything_matches",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_verify_activation_rejects_admission_for_a_different_manifest",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_verify_activation_rejects_binary_swap_after_admission",
+      "control_ids": [
+        "SEC-18"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_verify_activation_rejects_rollback_below_security_floor",
+      "control_ids": [
+        "SEC-18"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_verify_activation_rejects_stale_running_epoch_even_if_manifest_is_current",
+      "control_ids": [
+        "SEC-18"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_manifest_digest_is_deterministic",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_release_admission::test_manifest_digest_changes_with_any_field",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_unknown_scope_blocks_mutation",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.087
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_provisioned_scope_at_current_epoch_allows_mutation",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.011
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_stale_presented_epoch_blocked",
+      "control_ids": [
+        "SEC-14"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.013
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_revocation_effective_blocks_new_mutation",
+      "control_ids": [
+        "SEC-14"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.009
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_stale_fence_state_blocks_mutation",
+      "control_ids": [
+        "SEC-14"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.009
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_missing_presented_epoch_blocked",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.01
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_fence_locking_uses_fixed_sorted_order_regardless_of_caller_order",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_advance_revocation_on_unprovisioned_scope_raises",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.006
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_revocation::test_mutation_committing_first_precedes_effective_local_revocation",
+      "control_ids": [
+        "SEC-14",
+        "SEC-16"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.12
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_first_checkpoint_must_start_at_sequence_zero",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.015
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_sequential_checkpoints_extend_the_chain",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.019
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_gap_in_sequence_rejected",
+      "control_ids": [
+        "SEC-15"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.013
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_fork_attempt_different_head_hash_for_same_sequence_rejected",
+      "control_ids": [
+        "SEC-15"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.012
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_exact_replay_of_same_checkpoint_is_idempotent_not_an_error",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.014
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_freshness_check_passes_within_bound",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_freshness_check_blocks_when_stale",
+      "control_ids": [
+        "SEC-15"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.013
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_freshness_check_blocks_when_no_checkpoint_exists_yet",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.009
+    },
+    {
+      "test_id": "packages.cassandre_security.tests.test_witness::test_two_different_product_chains_are_independent",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.013
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_authorization_gate_denies_ingest_for_revoked_actor_and_blocks_mutation",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_authorization_gate_allows_a_different_non_denied_actor",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_authorization_gate_denies_unknown_action_by_default",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_authorization_gate_denies_document_ingestion_over_api_returns_403",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 1.065
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_alias_aware_self_approval_rejected_even_with_distinct_actor_ids",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_domain_layer_alone_would_have_allowed_the_alias_case",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_sealed_document_round_trips_and_tampered_ciphertext_fails_closed",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_document_sealing_service_used_directly",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.001
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_revocation_fence_blocks_stale_epoch_on_publish_against_real_postgres",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.061
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_revocation_fence_blocks_unprovisioned_scope_on_checker_decision",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.05
+    },
+    {
+      "test_id": "products.clauseos.tests.test_security_integration::test_canonical_evidence_v2_for_policy_release_publication_round_trips_and_fails_closed_on_tamper",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.004
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_run_calculation_denied_for_actor_with_no_granted_roles",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_export_result_package_denied_for_actor_with_no_granted_roles",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.005
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_revoked_actor_denied_even_with_correct_role",
+      "control_ids": [
+        "SEC-04",
+        "SEC-14"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_actor_with_a_custom_grant_can_be_authorized_not_just_the_fixed_default",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_revocation_fence_blocks_run_calculation_with_a_stale_epoch",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.572
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_revocation_fence_blocks_export_result_package_with_a_stale_epoch",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.543
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_challenger_run_evidence_v2_round_trips",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_challenger_run_evidence_v2_rejects_a_mutated_body",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_challenger_run_evidence_v2_rejects_a_stripped_signature",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_challenger_run_evidence_v2_does_not_touch_the_existing_v1_export_path",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.005
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_witness_checkpoints_are_gapless_and_reject_a_forked_extension",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.325
+    },
+    {
+      "test_id": "products.riskos.tests.test_security_integration::test_run_calculation_submits_a_witness_checkpoint_per_audit_event",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.484
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_revoked_actor_is_denied_adding_an_obligation_in_memory",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_non_revoked_actor_still_succeeds_in_memory",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.002
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_revoked_actor_is_denied_exporting_a_reservation_in_memory",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.025
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_revoked_actor_is_denied_across_every_gated_action",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.027
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_authorization_denied_error_carries_the_revoked_reason_code",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.003
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_authorization::test_revoked_actor_is_denied_reserving_a_plan_against_real_postgres",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.386
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_revocation_fence::test_reserve_plan_is_blocked_once_its_obligation_scope_is_revoked",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.419
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_revocation_fence::test_reserve_plan_presenting_a_stale_epoch_is_blocked_after_revocation_advances_it",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.352
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_revocation_fence::test_revocation_committing_first_blocks_a_concurrently_attempted_reservation_under_real_postgres_locking",
+      "control_ids": [
+        "SEC-14",
+        "SEC-16"
+      ],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.402
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_evidence_v2::test_export_produces_an_additive_evidence_v2_container_alongside_the_envelope",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.012
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_evidence_v2::test_evidence_v2_is_not_recreated_on_an_idempotent_replay",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.022
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_evidence_v2::test_evidence_v2_tamper_is_caught_by_verify_evidence",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.022
+    },
+    {
+      "test_id": "products.collateralos.tests.test_security_evidence_v2::test_sql_store_export_produces_evidence_v2_too",
+      "control_ids": [],
+      "observed_result": "PASS",
+      "observed_at": "2026-09-15T11:00:21.632494+00:00",
+      "duration_seconds": 0.512
+    }
+  ],
+  "summary": {
+    "total": 183,
+    "pass": 183,
+    "fail": 0,
+    "not_run": 0,
+    "unmapped_to_a_control": 133
+  },
+  "open_findings": [],
+  "exceptions": [
+    "No SEC-09 physical ceremony (synthetic drill only)",
+    "No SEC-12 full-infrastructure TLS hybrid enforcement",
+    "No SEC-22 independent human review",
+    "No SEC-23/24 confidential computing or FHE/MPC"
+  ],
+  "approval": "separate_human_release_decision"
+}

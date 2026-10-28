@@ -1,0 +1,18 @@
+{
+  "schema_name": "wrong_way_map",
+  "schema_version": "1.0.0",
+  "is_simulated": true,
+  "generated_by": "DEC-COL-01 provisional policy bundle SIM-POLICY-001",
+  "mappings": [
+    {
+      "counterparty_id": "SIM-CPTY-0001",
+      "excluded_issuer_groups": ["SIM-ISSUER-GROUP-0001"],
+      "reason": "counterparty is guarantor of issuer group 0001 (synthetic)"
+    },
+    {
+      "counterparty_id": "SIM-CPTY-0002",
+      "excluded_issuer_groups": ["SIM-ISSUER-GROUP-0002"],
+      "reason": "counterparty is affiliate of issuer group 0002 (synthetic)"
+    }
+  ]
+}

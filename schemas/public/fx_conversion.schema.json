@@ -1,0 +1,68 @@
+{
+  "$defs": {
+    "QuoteDirection": {
+      "enum": [
+        "source_per_target",
+        "target_per_source"
+      ],
+      "title": "QuoteDirection",
+      "type": "string"
+    }
+  },
+  "$id": "https://cassandre.sim/schemas/public/fx_conversion.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "quote_direction": {
+      "$ref": "#/$defs/QuoteDirection"
+    },
+    "rate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Rate"
+    },
+    "rounding_rule": {
+      "title": "Rounding Rule",
+      "type": "string"
+    },
+    "rounding_stage": {
+      "title": "Rounding Stage",
+      "type": "string"
+    },
+    "source_currency": {
+      "title": "Source Currency",
+      "type": "string"
+    },
+    "source_snapshot_hash": {
+      "title": "Source Snapshot Hash",
+      "type": "string"
+    },
+    "target_currency": {
+      "title": "Target Currency",
+      "type": "string"
+    },
+    "valuation_time": {
+      "format": "date-time",
+      "title": "Valuation Time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_currency",
+    "target_currency",
+    "quote_direction",
+    "rate",
+    "valuation_time",
+    "source_snapshot_hash",
+    "rounding_stage",
+    "rounding_rule"
+  ],
+  "title": "FXConversion",
+  "type": "object"
+}

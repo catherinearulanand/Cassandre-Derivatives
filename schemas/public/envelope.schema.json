@@ -1,0 +1,194 @@
+{
+  "$defs": {
+    "ContentReference": {
+      "properties": {
+        "content_hash": {
+          "title": "Content Hash",
+          "type": "string"
+        },
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "schema_name": {
+          "title": "Schema Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "object_id",
+        "schema_name",
+        "content_hash"
+      ],
+      "title": "ContentReference",
+      "type": "object"
+    },
+    "ProducerProduct": {
+      "enum": [
+        "clauseos",
+        "riskos",
+        "collateralos",
+        "cassandre"
+      ],
+      "title": "ProducerProduct",
+      "type": "string"
+    },
+    "Signature": {
+      "properties": {
+        "algorithm": {
+          "const": "Ed25519",
+          "title": "Algorithm",
+          "type": "string"
+        },
+        "key_id": {
+          "title": "Key Id",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "key_id",
+        "value"
+      ],
+      "title": "Signature",
+      "type": "object"
+    },
+    "SimulationProvenance": {
+      "properties": {
+        "generator_version": {
+          "title": "Generator Version",
+          "type": "string"
+        },
+        "is_simulated": {
+          "const": true,
+          "title": "Is Simulated",
+          "type": "boolean"
+        },
+        "scenario_id": {
+          "title": "Scenario Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "is_simulated",
+        "scenario_id",
+        "generator_version"
+      ],
+      "title": "SimulationProvenance",
+      "type": "object"
+    }
+  },
+  "$id": "https://cassandre.sim/schemas/public/envelope.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "audience": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Audience",
+      "type": "array"
+    },
+    "authority_status": {
+      "title": "Authority Status",
+      "type": "string"
+    },
+    "content_hash": {
+      "title": "Content Hash",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "effective_as_of": {
+      "format": "date-time",
+      "title": "Effective As Of",
+      "type": "string"
+    },
+    "issuer": {
+      "title": "Issuer",
+      "type": "string"
+    },
+    "lineage": {
+      "items": {
+        "$ref": "#/$defs/ContentReference"
+      },
+      "title": "Lineage",
+      "type": "array"
+    },
+    "object_id": {
+      "title": "Object Id",
+      "type": "string"
+    },
+    "object_version": {
+      "title": "Object Version",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "producer_product": {
+      "$ref": "#/$defs/ProducerProduct"
+    },
+    "producer_version": {
+      "title": "Producer Version",
+      "type": "string"
+    },
+    "purpose_constraints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Purpose Constraints",
+      "type": "array"
+    },
+    "schema_name": {
+      "title": "Schema Name",
+      "type": "string"
+    },
+    "schema_version": {
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "signature": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Signature"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "simulation_provenance": {
+      "$ref": "#/$defs/SimulationProvenance"
+    }
+  },
+  "required": [
+    "schema_name",
+    "schema_version",
+    "producer_product",
+    "producer_version",
+    "issuer",
+    "audience",
+    "object_id",
+    "object_version",
+    "content_hash",
+    "created_at",
+    "effective_as_of",
+    "simulation_provenance",
+    "authority_status",
+    "purpose_constraints",
+    "lineage",
+    "payload"
+  ],
+  "title": "Envelope",
+  "type": "object"
+}

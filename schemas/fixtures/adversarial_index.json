@@ -1,0 +1,5707 @@
+[
+  {
+    "case_type": "RATINGS_STATE_MISSING",
+    "description": "Threshold depends on a ratings state this bundle never supplies; expected EXTERNAL_STATE_REQUIRED, never a defaulted threshold.",
+    "domain": "AGREEMENT",
+    "index_id": "SIM-ADV-AGR-001",
+    "object_id": "SIM-AGR-BUNDLE-004"
+  },
+  {
+    "case_type": "UNSUPPORTED_ROUNDING_ELECTION",
+    "description": "Same CSA family as a calculable bundle but an election (rounding-before-MTA) the one implemented method pack does not support; expected UNSUPPORTED_AGREEMENT/METHOD_UNRESOLVED.",
+    "domain": "AGREEMENT",
+    "index_id": "SIM-ADV-AGR-002",
+    "object_id": "SIM-AGR-BUNDLE-007"
+  },
+  {
+    "case_type": "CONFLICTING_CLAUSES",
+    "description": "Bundle contains two irreconcilable statements of the same material term with no stated precedence; expected status REVIEW_REQUIRED.",
+    "domain": "AGREEMENT",
+    "index_id": "SIM-ADV-AGR-003",
+    "object_id": "SIM-AGR-BUNDLE-010"
+  },
+  {
+    "case_type": "MISSING_INCORPORATED_DOCUMENT",
+    "description": "Bundle declares an incorporated document that is never supplied; expected status BUNDLE_INCOMPLETE.",
+    "domain": "AGREEMENT",
+    "index_id": "SIM-ADV-AGR-004",
+    "object_id": "SIM-AGR-BUNDLE-011"
+  },
+  {
+    "case_type": "WRONG_WAY_ISSUER_EXCLUSION_CLAUSE",
+    "description": "Bundle's eligible-collateral clause includes an explicit wrong-way issuer exclusion and concentration cap.",
+    "domain": "AGREEMENT",
+    "index_id": "SIM-ADV-AGR-005",
+    "object_id": "SIM-AGR-BUNDLE-012"
+  },
+  {
+    "case_type": "DUPLICATE",
+    "description": "Trade SIM-TRADE-00206 (version 2) is a deliberate DUPLICATE population trap; disposition=DUPLICATE.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-001",
+    "object_id": "SIM-TRADE-00206"
+  },
+  {
+    "case_type": "DUPLICATE",
+    "description": "Trade SIM-TRADE-00222 (version 2) is a deliberate DUPLICATE population trap; disposition=DUPLICATE.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-002",
+    "object_id": "SIM-TRADE-00222"
+  },
+  {
+    "case_type": "DUPLICATE",
+    "description": "Trade SIM-TRADE-00168 (version 2) is a deliberate DUPLICATE population trap; disposition=DUPLICATE.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-003",
+    "object_id": "SIM-TRADE-00168"
+  },
+  {
+    "case_type": "DUPLICATE",
+    "description": "Trade SIM-TRADE-00124 (version 2) is a deliberate DUPLICATE population trap; disposition=DUPLICATE.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-004",
+    "object_id": "SIM-TRADE-00124"
+  },
+  {
+    "case_type": "DUPLICATE",
+    "description": "Trade SIM-TRADE-00034 (version 2) is a deliberate DUPLICATE population trap; disposition=DUPLICATE.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-005",
+    "object_id": "SIM-TRADE-00034"
+  },
+  {
+    "case_type": "WRONG_ENTITY",
+    "description": "Trade SIM-TRADE-00286 (version 1) is a deliberate WRONG_ENTITY population trap; disposition=REJECTED, rejection_reason=WRONG_ENTITY.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-006",
+    "object_id": "SIM-TRADE-00286"
+  },
+  {
+    "case_type": "WRONG_ENTITY",
+    "description": "Trade SIM-TRADE-00287 (version 1) is a deliberate WRONG_ENTITY population trap; disposition=REJECTED, rejection_reason=WRONG_ENTITY.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-007",
+    "object_id": "SIM-TRADE-00287"
+  },
+  {
+    "case_type": "WRONG_ENTITY",
+    "description": "Trade SIM-TRADE-00288 (version 1) is a deliberate WRONG_ENTITY population trap; disposition=REJECTED, rejection_reason=WRONG_ENTITY.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-008",
+    "object_id": "SIM-TRADE-00288"
+  },
+  {
+    "case_type": "WRONG_SIGN",
+    "description": "Trade SIM-TRADE-00289 (version 1) is a deliberate WRONG_SIGN population trap; disposition=REJECTED, rejection_reason=WRONG_SIGN.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-009",
+    "object_id": "SIM-TRADE-00289"
+  },
+  {
+    "case_type": "WRONG_SIGN",
+    "description": "Trade SIM-TRADE-00290 (version 1) is a deliberate WRONG_SIGN population trap; disposition=REJECTED, rejection_reason=WRONG_SIGN.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-010",
+    "object_id": "SIM-TRADE-00290"
+  },
+  {
+    "case_type": "WRONG_SIGN",
+    "description": "Trade SIM-TRADE-00291 (version 1) is a deliberate WRONG_SIGN population trap; disposition=REJECTED, rejection_reason=WRONG_SIGN.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-011",
+    "object_id": "SIM-TRADE-00291"
+  },
+  {
+    "case_type": "UNRECOGNIZED_COUNTERPARTY",
+    "description": "Trade SIM-TRADE-00292 (version 1) is a deliberate UNRECOGNIZED_COUNTERPARTY population trap; disposition=REJECTED, rejection_reason=UNRECOGNIZED_COUNTERPARTY.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-012",
+    "object_id": "SIM-TRADE-00292"
+  },
+  {
+    "case_type": "UNRECOGNIZED_COUNTERPARTY",
+    "description": "Trade SIM-TRADE-00293 (version 1) is a deliberate UNRECOGNIZED_COUNTERPARTY population trap; disposition=REJECTED, rejection_reason=UNRECOGNIZED_COUNTERPARTY.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-013",
+    "object_id": "SIM-TRADE-00293"
+  },
+  {
+    "case_type": "UNSUPPORTED_PRODUCT",
+    "description": "Trade SIM-TRADE-00294 (version 1) is a deliberate UNSUPPORTED_PRODUCT population trap; disposition=UNSUPPORTED.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-014",
+    "object_id": "SIM-TRADE-00294"
+  },
+  {
+    "case_type": "UNSUPPORTED_PRODUCT",
+    "description": "Trade SIM-TRADE-00295 (version 1) is a deliberate UNSUPPORTED_PRODUCT population trap; disposition=UNSUPPORTED.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-015",
+    "object_id": "SIM-TRADE-00295"
+  },
+  {
+    "case_type": "MISSING_TRADE",
+    "description": "SIM-TRADE-99001 is named by the source-control manifest as expected but never appears in the delivered population.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-016",
+    "object_id": "SIM-TRADE-99001"
+  },
+  {
+    "case_type": "MISSING_TRADE",
+    "description": "SIM-TRADE-99002 is named by the source-control manifest as expected but never appears in the delivered population.",
+    "domain": "TRADE",
+    "index_id": "SIM-ADV-TRD-017",
+    "object_id": "SIM-TRADE-99002"
+  },
+  {
+    "case_type": "STALE_SNAPSHOT",
+    "description": "Snapshot SIM-MKT-SNAP-001 (QUIET) has stale_after before as_of: deliberately stale: stale_after precedes as_of",
+    "domain": "MARKET",
+    "index_id": "SIM-ADV-MKT-001",
+    "object_id": "SIM-MKT-SNAP-001"
+  },
+  {
+    "case_type": "MISSING_QUOTE",
+    "description": "Snapshot SIM-MKT-SNAP-011 (RATE_SHOCK) omits an expected FX quote: deliberately missing quote: ('INR', 'USD') omitted",
+    "domain": "MARKET",
+    "index_id": "SIM-ADV-MKT-002",
+    "object_id": "SIM-MKT-SNAP-011"
+  },
+  {
+    "case_type": "CROSSED_MARKET",
+    "description": "Snapshot SIM-MKT-SNAP-021 (FX_STRESS) has a degenerate/crossed quote: deliberately crossed/degenerate EUR/USD quote",
+    "domain": "MARKET",
+    "index_id": "SIM-ADV-MKT-003",
+    "object_id": "SIM-MKT-SNAP-021"
+  },
+  {
+    "case_type": "STALE_SNAPSHOT",
+    "description": "Snapshot SIM-MKT-SNAP-026 (COMBINED_LIQUIDITY_STRESS) has stale_after before as_of: deliberately stale: stale_after precedes as_of; deliberately missing quote: ('INR', 'USD') omitted",
+    "domain": "MARKET",
+    "index_id": "SIM-ADV-MKT-004",
+    "object_id": "SIM-MKT-SNAP-026"
+  },
+  {
+    "case_type": "MISSING_QUOTE",
+    "description": "Snapshot SIM-MKT-SNAP-026 (COMBINED_LIQUIDITY_STRESS) omits an expected FX quote: deliberately stale: stale_after precedes as_of; deliberately missing quote: ('INR', 'USD') omitted",
+    "domain": "MARKET",
+    "index_id": "SIM-ADV-MKT-005",
+    "object_id": "SIM-MKT-SNAP-026"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00003 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00001",
+    "object_id": "SIM-INV-POS-00003"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00004 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00002",
+    "object_id": "SIM-INV-POS-00004"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00005 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00003",
+    "object_id": "SIM-INV-POS-00005"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00006 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00004",
+    "object_id": "SIM-INV-POS-00006"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00007 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00005",
+    "object_id": "SIM-INV-POS-00007"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00008 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00006",
+    "object_id": "SIM-INV-POS-00008"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00009 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00007",
+    "object_id": "SIM-INV-POS-00009"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00012 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00008",
+    "object_id": "SIM-INV-POS-00012"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00013 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00009",
+    "object_id": "SIM-INV-POS-00013"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00014 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00010",
+    "object_id": "SIM-INV-POS-00014"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00015 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00011",
+    "object_id": "SIM-INV-POS-00015"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00016 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00012",
+    "object_id": "SIM-INV-POS-00016"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00017 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00013",
+    "object_id": "SIM-INV-POS-00017"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00018 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00014",
+    "object_id": "SIM-INV-POS-00018"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00021 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00015",
+    "object_id": "SIM-INV-POS-00021"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00022 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00016",
+    "object_id": "SIM-INV-POS-00022"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00023 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00017",
+    "object_id": "SIM-INV-POS-00023"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00024 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00018",
+    "object_id": "SIM-INV-POS-00024"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00025 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00019",
+    "object_id": "SIM-INV-POS-00025"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00026 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00020",
+    "object_id": "SIM-INV-POS-00026"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00027 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00021",
+    "object_id": "SIM-INV-POS-00027"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00030 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00022",
+    "object_id": "SIM-INV-POS-00030"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00031 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00023",
+    "object_id": "SIM-INV-POS-00031"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00032 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00024",
+    "object_id": "SIM-INV-POS-00032"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00033 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00025",
+    "object_id": "SIM-INV-POS-00033"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00034 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00026",
+    "object_id": "SIM-INV-POS-00034"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00035 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00027",
+    "object_id": "SIM-INV-POS-00035"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00036 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00028",
+    "object_id": "SIM-INV-POS-00036"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00039 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00029",
+    "object_id": "SIM-INV-POS-00039"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00040 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00030",
+    "object_id": "SIM-INV-POS-00040"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00041 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00031",
+    "object_id": "SIM-INV-POS-00041"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00042 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00032",
+    "object_id": "SIM-INV-POS-00042"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00043 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00033",
+    "object_id": "SIM-INV-POS-00043"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00044 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00034",
+    "object_id": "SIM-INV-POS-00044"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00045 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00035",
+    "object_id": "SIM-INV-POS-00045"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00048 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00036",
+    "object_id": "SIM-INV-POS-00048"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00049 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00037",
+    "object_id": "SIM-INV-POS-00049"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00050 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00038",
+    "object_id": "SIM-INV-POS-00050"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00051 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00039",
+    "object_id": "SIM-INV-POS-00051"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00052 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00040",
+    "object_id": "SIM-INV-POS-00052"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00053 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00041",
+    "object_id": "SIM-INV-POS-00053"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00054 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00042",
+    "object_id": "SIM-INV-POS-00054"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00057 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00043",
+    "object_id": "SIM-INV-POS-00057"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00058 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00044",
+    "object_id": "SIM-INV-POS-00058"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00059 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00045",
+    "object_id": "SIM-INV-POS-00059"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00060 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00046",
+    "object_id": "SIM-INV-POS-00060"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00061 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00047",
+    "object_id": "SIM-INV-POS-00061"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00062 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00048",
+    "object_id": "SIM-INV-POS-00062"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00063 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00049",
+    "object_id": "SIM-INV-POS-00063"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00066 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00050",
+    "object_id": "SIM-INV-POS-00066"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00067 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00051",
+    "object_id": "SIM-INV-POS-00067"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00068 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00052",
+    "object_id": "SIM-INV-POS-00068"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00069 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00053",
+    "object_id": "SIM-INV-POS-00069"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00070 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00054",
+    "object_id": "SIM-INV-POS-00070"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00071 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00055",
+    "object_id": "SIM-INV-POS-00071"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00072 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00056",
+    "object_id": "SIM-INV-POS-00072"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00075 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00057",
+    "object_id": "SIM-INV-POS-00075"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00076 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00058",
+    "object_id": "SIM-INV-POS-00076"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00077 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00059",
+    "object_id": "SIM-INV-POS-00077"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00078 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00060",
+    "object_id": "SIM-INV-POS-00078"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00079 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00061",
+    "object_id": "SIM-INV-POS-00079"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00080 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00062",
+    "object_id": "SIM-INV-POS-00080"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00081 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00063",
+    "object_id": "SIM-INV-POS-00081"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00084 (CASH_USD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00064",
+    "object_id": "SIM-INV-POS-00084"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00085 (CASH_USD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00065",
+    "object_id": "SIM-INV-POS-00085"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00086 (CASH_USD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00066",
+    "object_id": "SIM-INV-POS-00086"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00087 (CASH_USD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00067",
+    "object_id": "SIM-INV-POS-00087"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00088 (CASH_USD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00068",
+    "object_id": "SIM-INV-POS-00088"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00089 (CASH_USD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00069",
+    "object_id": "SIM-INV-POS-00089"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00090 (CASH_USD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00070",
+    "object_id": "SIM-INV-POS-00090"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00093 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00071",
+    "object_id": "SIM-INV-POS-00093"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00094 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00072",
+    "object_id": "SIM-INV-POS-00094"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00095 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00073",
+    "object_id": "SIM-INV-POS-00095"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00096 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00074",
+    "object_id": "SIM-INV-POS-00096"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00097 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00075",
+    "object_id": "SIM-INV-POS-00097"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00098 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00076",
+    "object_id": "SIM-INV-POS-00098"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00099 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00077",
+    "object_id": "SIM-INV-POS-00099"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00102 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00078",
+    "object_id": "SIM-INV-POS-00102"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00103 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00079",
+    "object_id": "SIM-INV-POS-00103"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00104 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00080",
+    "object_id": "SIM-INV-POS-00104"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00105 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00081",
+    "object_id": "SIM-INV-POS-00105"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00106 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00082",
+    "object_id": "SIM-INV-POS-00106"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00107 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00083",
+    "object_id": "SIM-INV-POS-00107"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00108 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00084",
+    "object_id": "SIM-INV-POS-00108"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00111 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00085",
+    "object_id": "SIM-INV-POS-00111"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00112 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00086",
+    "object_id": "SIM-INV-POS-00112"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00113 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00087",
+    "object_id": "SIM-INV-POS-00113"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00114 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00088",
+    "object_id": "SIM-INV-POS-00114"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00115 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00089",
+    "object_id": "SIM-INV-POS-00115"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00116 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00090",
+    "object_id": "SIM-INV-POS-00116"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00117 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00091",
+    "object_id": "SIM-INV-POS-00117"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00120 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00092",
+    "object_id": "SIM-INV-POS-00120"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00121 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00093",
+    "object_id": "SIM-INV-POS-00121"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00122 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00094",
+    "object_id": "SIM-INV-POS-00122"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00123 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00095",
+    "object_id": "SIM-INV-POS-00123"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00124 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00096",
+    "object_id": "SIM-INV-POS-00124"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00125 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00097",
+    "object_id": "SIM-INV-POS-00125"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00126 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00098",
+    "object_id": "SIM-INV-POS-00126"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00129 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00099",
+    "object_id": "SIM-INV-POS-00129"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00130 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00100",
+    "object_id": "SIM-INV-POS-00130"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00131 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00101",
+    "object_id": "SIM-INV-POS-00131"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00132 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00102",
+    "object_id": "SIM-INV-POS-00132"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00133 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00103",
+    "object_id": "SIM-INV-POS-00133"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00134 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00104",
+    "object_id": "SIM-INV-POS-00134"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00135 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00105",
+    "object_id": "SIM-INV-POS-00135"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00138 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00106",
+    "object_id": "SIM-INV-POS-00138"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00139 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00107",
+    "object_id": "SIM-INV-POS-00139"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00140 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00108",
+    "object_id": "SIM-INV-POS-00140"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00141 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00109",
+    "object_id": "SIM-INV-POS-00141"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00142 (CASH_EUR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00110",
+    "object_id": "SIM-INV-POS-00142"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00143 (CASH_EUR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00111",
+    "object_id": "SIM-INV-POS-00143"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00144 (CASH_EUR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00112",
+    "object_id": "SIM-INV-POS-00144"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00147 (CASH_EUR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00113",
+    "object_id": "SIM-INV-POS-00147"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00148 (CASH_EUR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00114",
+    "object_id": "SIM-INV-POS-00148"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00149 (CASH_EUR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00115",
+    "object_id": "SIM-INV-POS-00149"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00150 (CASH_EUR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00116",
+    "object_id": "SIM-INV-POS-00150"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00153 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00117",
+    "object_id": "SIM-INV-POS-00153"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00154 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00118",
+    "object_id": "SIM-INV-POS-00154"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00155 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00119",
+    "object_id": "SIM-INV-POS-00155"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00156 (CASH_INR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00120",
+    "object_id": "SIM-INV-POS-00156"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00157 (CASH_INR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00121",
+    "object_id": "SIM-INV-POS-00157"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00158 (CASH_INR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00122",
+    "object_id": "SIM-INV-POS-00158"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00159 (CASH_INR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00123",
+    "object_id": "SIM-INV-POS-00159"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00162 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00124",
+    "object_id": "SIM-INV-POS-00162"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00163 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00125",
+    "object_id": "SIM-INV-POS-00163"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00164 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00126",
+    "object_id": "SIM-INV-POS-00164"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00165 (CASH_INR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00127",
+    "object_id": "SIM-INV-POS-00165"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00166 (CASH_INR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00128",
+    "object_id": "SIM-INV-POS-00166"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00167 (CASH_INR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00129",
+    "object_id": "SIM-INV-POS-00167"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00168 (CASH_INR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00130",
+    "object_id": "SIM-INV-POS-00168"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00171 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00131",
+    "object_id": "SIM-INV-POS-00171"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00172 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00132",
+    "object_id": "SIM-INV-POS-00172"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00173 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00133",
+    "object_id": "SIM-INV-POS-00173"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00174 (CASH_INR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00134",
+    "object_id": "SIM-INV-POS-00174"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00175 (CASH_INR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00135",
+    "object_id": "SIM-INV-POS-00175"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00176 (CASH_INR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00136",
+    "object_id": "SIM-INV-POS-00176"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00177 (CASH_INR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00137",
+    "object_id": "SIM-INV-POS-00177"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00180 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00138",
+    "object_id": "SIM-INV-POS-00180"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00181 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00139",
+    "object_id": "SIM-INV-POS-00181"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00182 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00140",
+    "object_id": "SIM-INV-POS-00182"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00183 (CASH_INR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00141",
+    "object_id": "SIM-INV-POS-00183"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00184 (CASH_INR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00142",
+    "object_id": "SIM-INV-POS-00184"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00185 (CASH_INR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00143",
+    "object_id": "SIM-INV-POS-00185"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00186 (CASH_INR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00144",
+    "object_id": "SIM-INV-POS-00186"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00189 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00145",
+    "object_id": "SIM-INV-POS-00189"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00190 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00146",
+    "object_id": "SIM-INV-POS-00190"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00191 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00147",
+    "object_id": "SIM-INV-POS-00191"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00192 (CASH_INR) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00148",
+    "object_id": "SIM-INV-POS-00192"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00193 (CASH_INR) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00149",
+    "object_id": "SIM-INV-POS-00193"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00194 (CASH_INR) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00150",
+    "object_id": "SIM-INV-POS-00194"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00195 (CASH_INR) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00151",
+    "object_id": "SIM-INV-POS-00195"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00198 (CASH_INR) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00152",
+    "object_id": "SIM-INV-POS-00198"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00199 (CASH_INR) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00153",
+    "object_id": "SIM-INV-POS-00199"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00200 (CASH_INR) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00154",
+    "object_id": "SIM-INV-POS-00200"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00202 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00155",
+    "object_id": "SIM-INV-POS-00202"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00203 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00156",
+    "object_id": "SIM-INV-POS-00203"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00204 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00157",
+    "object_id": "SIM-INV-POS-00204"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00205 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00158",
+    "object_id": "SIM-INV-POS-00205"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00206 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00159",
+    "object_id": "SIM-INV-POS-00206"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00207 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00160",
+    "object_id": "SIM-INV-POS-00207"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00208 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00161",
+    "object_id": "SIM-INV-POS-00208"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00209 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00162",
+    "object_id": "SIM-INV-POS-00209"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00211 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00163",
+    "object_id": "SIM-INV-POS-00211"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00212 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00164",
+    "object_id": "SIM-INV-POS-00212"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00213 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00165",
+    "object_id": "SIM-INV-POS-00213"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00214 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00166",
+    "object_id": "SIM-INV-POS-00214"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00215 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00167",
+    "object_id": "SIM-INV-POS-00215"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00216 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00168",
+    "object_id": "SIM-INV-POS-00216"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00217 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00169",
+    "object_id": "SIM-INV-POS-00217"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00218 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00170",
+    "object_id": "SIM-INV-POS-00218"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00220 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00171",
+    "object_id": "SIM-INV-POS-00220"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00221 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00172",
+    "object_id": "SIM-INV-POS-00221"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00222 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00173",
+    "object_id": "SIM-INV-POS-00222"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00223 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00174",
+    "object_id": "SIM-INV-POS-00223"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00224 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00175",
+    "object_id": "SIM-INV-POS-00224"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00225 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00176",
+    "object_id": "SIM-INV-POS-00225"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00226 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00177",
+    "object_id": "SIM-INV-POS-00226"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00227 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00178",
+    "object_id": "SIM-INV-POS-00227"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00229 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00179",
+    "object_id": "SIM-INV-POS-00229"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00230 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00180",
+    "object_id": "SIM-INV-POS-00230"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00231 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00181",
+    "object_id": "SIM-INV-POS-00231"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00232 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00182",
+    "object_id": "SIM-INV-POS-00232"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00233 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00183",
+    "object_id": "SIM-INV-POS-00233"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00234 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00184",
+    "object_id": "SIM-INV-POS-00234"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00235 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00185",
+    "object_id": "SIM-INV-POS-00235"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00236 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00186",
+    "object_id": "SIM-INV-POS-00236"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00238 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00187",
+    "object_id": "SIM-INV-POS-00238"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00239 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00188",
+    "object_id": "SIM-INV-POS-00239"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00240 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00189",
+    "object_id": "SIM-INV-POS-00240"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00241 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00190",
+    "object_id": "SIM-INV-POS-00241"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00242 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00191",
+    "object_id": "SIM-INV-POS-00242"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00243 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00192",
+    "object_id": "SIM-INV-POS-00243"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00244 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00193",
+    "object_id": "SIM-INV-POS-00244"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00245 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00194",
+    "object_id": "SIM-INV-POS-00245"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00247 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00195",
+    "object_id": "SIM-INV-POS-00247"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00248 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00196",
+    "object_id": "SIM-INV-POS-00248"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00249 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00197",
+    "object_id": "SIM-INV-POS-00249"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00250 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00198",
+    "object_id": "SIM-INV-POS-00250"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00251 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00199",
+    "object_id": "SIM-INV-POS-00251"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00252 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00200",
+    "object_id": "SIM-INV-POS-00252"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00253 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00201",
+    "object_id": "SIM-INV-POS-00253"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00254 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00202",
+    "object_id": "SIM-INV-POS-00254"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00256 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00203",
+    "object_id": "SIM-INV-POS-00256"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00257 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00204",
+    "object_id": "SIM-INV-POS-00257"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00258 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00205",
+    "object_id": "SIM-INV-POS-00258"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00259 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00206",
+    "object_id": "SIM-INV-POS-00259"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00260 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00207",
+    "object_id": "SIM-INV-POS-00260"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00261 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00208",
+    "object_id": "SIM-INV-POS-00261"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00262 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00209",
+    "object_id": "SIM-INV-POS-00262"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00263 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00210",
+    "object_id": "SIM-INV-POS-00263"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00265 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00211",
+    "object_id": "SIM-INV-POS-00265"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00266 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00212",
+    "object_id": "SIM-INV-POS-00266"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00267 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00213",
+    "object_id": "SIM-INV-POS-00267"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00268 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00214",
+    "object_id": "SIM-INV-POS-00268"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00269 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00215",
+    "object_id": "SIM-INV-POS-00269"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00270 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00216",
+    "object_id": "SIM-INV-POS-00270"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00271 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00217",
+    "object_id": "SIM-INV-POS-00271"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00272 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00218",
+    "object_id": "SIM-INV-POS-00272"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00274 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00219",
+    "object_id": "SIM-INV-POS-00274"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00275 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00220",
+    "object_id": "SIM-INV-POS-00275"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00276 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00221",
+    "object_id": "SIM-INV-POS-00276"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00277 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00222",
+    "object_id": "SIM-INV-POS-00277"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00278 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00223",
+    "object_id": "SIM-INV-POS-00278"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00279 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00224",
+    "object_id": "SIM-INV-POS-00279"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00280 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00225",
+    "object_id": "SIM-INV-POS-00280"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00281 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00226",
+    "object_id": "SIM-INV-POS-00281"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00283 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00227",
+    "object_id": "SIM-INV-POS-00283"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00284 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00228",
+    "object_id": "SIM-INV-POS-00284"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00285 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00229",
+    "object_id": "SIM-INV-POS-00285"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00286 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00230",
+    "object_id": "SIM-INV-POS-00286"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00287 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00231",
+    "object_id": "SIM-INV-POS-00287"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00288 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00232",
+    "object_id": "SIM-INV-POS-00288"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00289 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00233",
+    "object_id": "SIM-INV-POS-00289"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00290 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00234",
+    "object_id": "SIM-INV-POS-00290"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00292 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00235",
+    "object_id": "SIM-INV-POS-00292"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00293 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00236",
+    "object_id": "SIM-INV-POS-00293"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00294 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00237",
+    "object_id": "SIM-INV-POS-00294"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00295 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00238",
+    "object_id": "SIM-INV-POS-00295"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00296 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00239",
+    "object_id": "SIM-INV-POS-00296"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00297 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00240",
+    "object_id": "SIM-INV-POS-00297"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00298 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00241",
+    "object_id": "SIM-INV-POS-00298"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00299 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00242",
+    "object_id": "SIM-INV-POS-00299"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00301 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00243",
+    "object_id": "SIM-INV-POS-00301"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00302 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00244",
+    "object_id": "SIM-INV-POS-00302"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00303 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00245",
+    "object_id": "SIM-INV-POS-00303"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00304 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00246",
+    "object_id": "SIM-INV-POS-00304"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00305 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00247",
+    "object_id": "SIM-INV-POS-00305"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00306 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00248",
+    "object_id": "SIM-INV-POS-00306"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00307 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00249",
+    "object_id": "SIM-INV-POS-00307"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00308 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00250",
+    "object_id": "SIM-INV-POS-00308"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00310 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00251",
+    "object_id": "SIM-INV-POS-00310"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00311 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00252",
+    "object_id": "SIM-INV-POS-00311"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00312 (US_TREASURY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00253",
+    "object_id": "SIM-INV-POS-00312"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00313 (US_TREASURY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00254",
+    "object_id": "SIM-INV-POS-00313"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00314 (US_TREASURY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00255",
+    "object_id": "SIM-INV-POS-00314"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00315 (US_TREASURY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00256",
+    "object_id": "SIM-INV-POS-00315"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00316 (US_TREASURY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00257",
+    "object_id": "SIM-INV-POS-00316"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00317 (US_TREASURY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00258",
+    "object_id": "SIM-INV-POS-00317"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00319 (US_TREASURY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00259",
+    "object_id": "SIM-INV-POS-00319"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00320 (US_TREASURY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00260",
+    "object_id": "SIM-INV-POS-00320"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00321 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00261",
+    "object_id": "SIM-INV-POS-00321"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00322 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00262",
+    "object_id": "SIM-INV-POS-00322"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00322 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00263",
+    "object_id": "SIM-INV-POS-00322"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00323 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00264",
+    "object_id": "SIM-INV-POS-00323"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00323 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00265",
+    "object_id": "SIM-INV-POS-00323"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00324 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00266",
+    "object_id": "SIM-INV-POS-00324"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00324 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00267",
+    "object_id": "SIM-INV-POS-00324"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00325 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00268",
+    "object_id": "SIM-INV-POS-00325"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00325 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00269",
+    "object_id": "SIM-INV-POS-00325"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00326 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00270",
+    "object_id": "SIM-INV-POS-00326"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00326 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00271",
+    "object_id": "SIM-INV-POS-00326"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00327 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00272",
+    "object_id": "SIM-INV-POS-00327"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00327 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00273",
+    "object_id": "SIM-INV-POS-00327"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00328 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00274",
+    "object_id": "SIM-INV-POS-00328"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00328 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00275",
+    "object_id": "SIM-INV-POS-00328"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00329 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00276",
+    "object_id": "SIM-INV-POS-00329"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00329 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00277",
+    "object_id": "SIM-INV-POS-00329"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00330 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00278",
+    "object_id": "SIM-INV-POS-00330"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00331 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00279",
+    "object_id": "SIM-INV-POS-00331"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00331 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00280",
+    "object_id": "SIM-INV-POS-00331"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00332 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00281",
+    "object_id": "SIM-INV-POS-00332"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00332 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00282",
+    "object_id": "SIM-INV-POS-00332"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00333 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00283",
+    "object_id": "SIM-INV-POS-00333"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00333 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00284",
+    "object_id": "SIM-INV-POS-00333"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00334 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00285",
+    "object_id": "SIM-INV-POS-00334"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00334 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00286",
+    "object_id": "SIM-INV-POS-00334"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00335 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00287",
+    "object_id": "SIM-INV-POS-00335"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00335 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00288",
+    "object_id": "SIM-INV-POS-00335"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00336 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00289",
+    "object_id": "SIM-INV-POS-00336"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00336 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00290",
+    "object_id": "SIM-INV-POS-00336"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00337 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00291",
+    "object_id": "SIM-INV-POS-00337"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00337 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00292",
+    "object_id": "SIM-INV-POS-00337"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00338 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00293",
+    "object_id": "SIM-INV-POS-00338"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00338 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00294",
+    "object_id": "SIM-INV-POS-00338"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00339 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00295",
+    "object_id": "SIM-INV-POS-00339"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00340 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00296",
+    "object_id": "SIM-INV-POS-00340"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00340 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00297",
+    "object_id": "SIM-INV-POS-00340"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00341 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00298",
+    "object_id": "SIM-INV-POS-00341"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00341 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00299",
+    "object_id": "SIM-INV-POS-00341"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00342 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00300",
+    "object_id": "SIM-INV-POS-00342"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00342 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00301",
+    "object_id": "SIM-INV-POS-00342"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00343 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00302",
+    "object_id": "SIM-INV-POS-00343"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00343 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00303",
+    "object_id": "SIM-INV-POS-00343"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00344 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00304",
+    "object_id": "SIM-INV-POS-00344"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00344 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00305",
+    "object_id": "SIM-INV-POS-00344"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00345 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00306",
+    "object_id": "SIM-INV-POS-00345"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00345 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00307",
+    "object_id": "SIM-INV-POS-00345"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00346 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00308",
+    "object_id": "SIM-INV-POS-00346"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00346 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00309",
+    "object_id": "SIM-INV-POS-00346"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00347 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00310",
+    "object_id": "SIM-INV-POS-00347"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00347 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00311",
+    "object_id": "SIM-INV-POS-00347"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00348 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00312",
+    "object_id": "SIM-INV-POS-00348"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00349 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00313",
+    "object_id": "SIM-INV-POS-00349"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00349 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00314",
+    "object_id": "SIM-INV-POS-00349"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00350 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00315",
+    "object_id": "SIM-INV-POS-00350"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00350 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00316",
+    "object_id": "SIM-INV-POS-00350"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00351 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00317",
+    "object_id": "SIM-INV-POS-00351"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00351 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00318",
+    "object_id": "SIM-INV-POS-00351"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00352 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00319",
+    "object_id": "SIM-INV-POS-00352"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00352 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00320",
+    "object_id": "SIM-INV-POS-00352"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00353 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00321",
+    "object_id": "SIM-INV-POS-00353"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00353 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00322",
+    "object_id": "SIM-INV-POS-00353"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00354 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00323",
+    "object_id": "SIM-INV-POS-00354"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00354 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00324",
+    "object_id": "SIM-INV-POS-00354"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00355 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00325",
+    "object_id": "SIM-INV-POS-00355"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00355 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00326",
+    "object_id": "SIM-INV-POS-00355"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00356 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00327",
+    "object_id": "SIM-INV-POS-00356"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00356 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00328",
+    "object_id": "SIM-INV-POS-00356"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00357 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00329",
+    "object_id": "SIM-INV-POS-00357"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00358 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00330",
+    "object_id": "SIM-INV-POS-00358"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00358 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00331",
+    "object_id": "SIM-INV-POS-00358"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00359 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00332",
+    "object_id": "SIM-INV-POS-00359"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00359 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00333",
+    "object_id": "SIM-INV-POS-00359"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00360 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00334",
+    "object_id": "SIM-INV-POS-00360"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00360 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00335",
+    "object_id": "SIM-INV-POS-00360"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00361 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00336",
+    "object_id": "SIM-INV-POS-00361"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00361 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00337",
+    "object_id": "SIM-INV-POS-00361"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00362 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00338",
+    "object_id": "SIM-INV-POS-00362"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00362 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00339",
+    "object_id": "SIM-INV-POS-00362"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00363 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00340",
+    "object_id": "SIM-INV-POS-00363"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00363 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00341",
+    "object_id": "SIM-INV-POS-00363"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00364 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00342",
+    "object_id": "SIM-INV-POS-00364"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00364 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00343",
+    "object_id": "SIM-INV-POS-00364"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00365 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00344",
+    "object_id": "SIM-INV-POS-00365"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00365 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00345",
+    "object_id": "SIM-INV-POS-00365"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00366 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00346",
+    "object_id": "SIM-INV-POS-00366"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00367 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00347",
+    "object_id": "SIM-INV-POS-00367"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00367 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00348",
+    "object_id": "SIM-INV-POS-00367"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00368 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00349",
+    "object_id": "SIM-INV-POS-00368"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00368 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00350",
+    "object_id": "SIM-INV-POS-00368"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00369 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00351",
+    "object_id": "SIM-INV-POS-00369"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00369 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00352",
+    "object_id": "SIM-INV-POS-00369"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00370 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00353",
+    "object_id": "SIM-INV-POS-00370"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00370 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00354",
+    "object_id": "SIM-INV-POS-00370"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00371 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00355",
+    "object_id": "SIM-INV-POS-00371"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00371 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00356",
+    "object_id": "SIM-INV-POS-00371"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00372 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00357",
+    "object_id": "SIM-INV-POS-00372"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00372 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00358",
+    "object_id": "SIM-INV-POS-00372"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00373 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00359",
+    "object_id": "SIM-INV-POS-00373"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00373 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00360",
+    "object_id": "SIM-INV-POS-00373"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00374 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00361",
+    "object_id": "SIM-INV-POS-00374"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00374 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00362",
+    "object_id": "SIM-INV-POS-00374"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00375 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00363",
+    "object_id": "SIM-INV-POS-00375"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00376 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00364",
+    "object_id": "SIM-INV-POS-00376"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00376 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00365",
+    "object_id": "SIM-INV-POS-00376"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00377 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00366",
+    "object_id": "SIM-INV-POS-00377"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00377 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00367",
+    "object_id": "SIM-INV-POS-00377"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00378 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00368",
+    "object_id": "SIM-INV-POS-00378"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00378 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00369",
+    "object_id": "SIM-INV-POS-00378"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00379 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00370",
+    "object_id": "SIM-INV-POS-00379"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00379 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00371",
+    "object_id": "SIM-INV-POS-00379"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00380 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00372",
+    "object_id": "SIM-INV-POS-00380"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00380 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00373",
+    "object_id": "SIM-INV-POS-00380"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00381 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00374",
+    "object_id": "SIM-INV-POS-00381"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00381 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00375",
+    "object_id": "SIM-INV-POS-00381"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00382 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00376",
+    "object_id": "SIM-INV-POS-00382"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00382 (SYNTHETIC_SOVEREIGN) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00377",
+    "object_id": "SIM-INV-POS-00382"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00383 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00378",
+    "object_id": "SIM-INV-POS-00383"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00383 (SYNTHETIC_SOVEREIGN) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00379",
+    "object_id": "SIM-INV-POS-00383"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00384 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00380",
+    "object_id": "SIM-INV-POS-00384"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00385 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00381",
+    "object_id": "SIM-INV-POS-00385"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00385 (SYNTHETIC_SOVEREIGN) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00382",
+    "object_id": "SIM-INV-POS-00385"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00386 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00383",
+    "object_id": "SIM-INV-POS-00386"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00386 (SYNTHETIC_SOVEREIGN) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00384",
+    "object_id": "SIM-INV-POS-00386"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00387 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00385",
+    "object_id": "SIM-INV-POS-00387"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00387 (SYNTHETIC_SOVEREIGN) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00386",
+    "object_id": "SIM-INV-POS-00387"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00388 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00387",
+    "object_id": "SIM-INV-POS-00388"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00388 (SYNTHETIC_SOVEREIGN) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00388",
+    "object_id": "SIM-INV-POS-00388"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00389 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00389",
+    "object_id": "SIM-INV-POS-00389"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00389 (SYNTHETIC_SOVEREIGN) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00390",
+    "object_id": "SIM-INV-POS-00389"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00390 (SYNTHETIC_SOVEREIGN) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00391",
+    "object_id": "SIM-INV-POS-00390"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00390 (SYNTHETIC_SOVEREIGN) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00392",
+    "object_id": "SIM-INV-POS-00390"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00391 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00393",
+    "object_id": "SIM-INV-POS-00391"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00392 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00394",
+    "object_id": "SIM-INV-POS-00392"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00392 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00395",
+    "object_id": "SIM-INV-POS-00392"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00393 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00396",
+    "object_id": "SIM-INV-POS-00393"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00393 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00397",
+    "object_id": "SIM-INV-POS-00393"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00394 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00398",
+    "object_id": "SIM-INV-POS-00394"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00394 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00399",
+    "object_id": "SIM-INV-POS-00394"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00395 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00400",
+    "object_id": "SIM-INV-POS-00395"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00395 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00401",
+    "object_id": "SIM-INV-POS-00395"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00396 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00402",
+    "object_id": "SIM-INV-POS-00396"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00396 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00403",
+    "object_id": "SIM-INV-POS-00396"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00397 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00404",
+    "object_id": "SIM-INV-POS-00397"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00397 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00405",
+    "object_id": "SIM-INV-POS-00397"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00398 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00406",
+    "object_id": "SIM-INV-POS-00398"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00398 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00407",
+    "object_id": "SIM-INV-POS-00398"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00399 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00408",
+    "object_id": "SIM-INV-POS-00399"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00399 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00409",
+    "object_id": "SIM-INV-POS-00399"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00400 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00410",
+    "object_id": "SIM-INV-POS-00400"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00401 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00411",
+    "object_id": "SIM-INV-POS-00401"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00401 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00412",
+    "object_id": "SIM-INV-POS-00401"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00402 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00413",
+    "object_id": "SIM-INV-POS-00402"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00402 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00414",
+    "object_id": "SIM-INV-POS-00402"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00403 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00415",
+    "object_id": "SIM-INV-POS-00403"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00403 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00416",
+    "object_id": "SIM-INV-POS-00403"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00404 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00417",
+    "object_id": "SIM-INV-POS-00404"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00404 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00418",
+    "object_id": "SIM-INV-POS-00404"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00405 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00419",
+    "object_id": "SIM-INV-POS-00405"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00405 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00420",
+    "object_id": "SIM-INV-POS-00405"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00406 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00421",
+    "object_id": "SIM-INV-POS-00406"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00406 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00422",
+    "object_id": "SIM-INV-POS-00406"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00407 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00423",
+    "object_id": "SIM-INV-POS-00407"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00407 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00424",
+    "object_id": "SIM-INV-POS-00407"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00408 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00425",
+    "object_id": "SIM-INV-POS-00408"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00408 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00426",
+    "object_id": "SIM-INV-POS-00408"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00409 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00427",
+    "object_id": "SIM-INV-POS-00409"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00410 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00428",
+    "object_id": "SIM-INV-POS-00410"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00410 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00429",
+    "object_id": "SIM-INV-POS-00410"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00411 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00430",
+    "object_id": "SIM-INV-POS-00411"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00411 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00431",
+    "object_id": "SIM-INV-POS-00411"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00412 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00432",
+    "object_id": "SIM-INV-POS-00412"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00412 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00433",
+    "object_id": "SIM-INV-POS-00412"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00413 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00434",
+    "object_id": "SIM-INV-POS-00413"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00413 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00435",
+    "object_id": "SIM-INV-POS-00413"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00414 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00436",
+    "object_id": "SIM-INV-POS-00414"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00414 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00437",
+    "object_id": "SIM-INV-POS-00414"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00415 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00438",
+    "object_id": "SIM-INV-POS-00415"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00415 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00439",
+    "object_id": "SIM-INV-POS-00415"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00416 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00440",
+    "object_id": "SIM-INV-POS-00416"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00416 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00441",
+    "object_id": "SIM-INV-POS-00416"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00417 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00442",
+    "object_id": "SIM-INV-POS-00417"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00417 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00443",
+    "object_id": "SIM-INV-POS-00417"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00418 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00444",
+    "object_id": "SIM-INV-POS-00418"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00419 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00445",
+    "object_id": "SIM-INV-POS-00419"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00419 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00446",
+    "object_id": "SIM-INV-POS-00419"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00420 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00447",
+    "object_id": "SIM-INV-POS-00420"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00420 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00448",
+    "object_id": "SIM-INV-POS-00420"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00421 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00449",
+    "object_id": "SIM-INV-POS-00421"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00421 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00450",
+    "object_id": "SIM-INV-POS-00421"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00422 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00451",
+    "object_id": "SIM-INV-POS-00422"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00422 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00452",
+    "object_id": "SIM-INV-POS-00422"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00423 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00453",
+    "object_id": "SIM-INV-POS-00423"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00423 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00454",
+    "object_id": "SIM-INV-POS-00423"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00424 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00455",
+    "object_id": "SIM-INV-POS-00424"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00424 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00456",
+    "object_id": "SIM-INV-POS-00424"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00425 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00457",
+    "object_id": "SIM-INV-POS-00425"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00425 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00458",
+    "object_id": "SIM-INV-POS-00425"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00426 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00459",
+    "object_id": "SIM-INV-POS-00426"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00426 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00460",
+    "object_id": "SIM-INV-POS-00426"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00427 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00461",
+    "object_id": "SIM-INV-POS-00427"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00428 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00462",
+    "object_id": "SIM-INV-POS-00428"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00428 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00463",
+    "object_id": "SIM-INV-POS-00428"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00429 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00464",
+    "object_id": "SIM-INV-POS-00429"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00429 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00465",
+    "object_id": "SIM-INV-POS-00429"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00430 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00466",
+    "object_id": "SIM-INV-POS-00430"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00430 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00467",
+    "object_id": "SIM-INV-POS-00430"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00431 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00468",
+    "object_id": "SIM-INV-POS-00431"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00431 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00469",
+    "object_id": "SIM-INV-POS-00431"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00432 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00470",
+    "object_id": "SIM-INV-POS-00432"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00432 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00471",
+    "object_id": "SIM-INV-POS-00432"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00433 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00472",
+    "object_id": "SIM-INV-POS-00433"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00433 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00473",
+    "object_id": "SIM-INV-POS-00433"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00434 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00474",
+    "object_id": "SIM-INV-POS-00434"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00434 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00475",
+    "object_id": "SIM-INV-POS-00434"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00435 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00476",
+    "object_id": "SIM-INV-POS-00435"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00435 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00477",
+    "object_id": "SIM-INV-POS-00435"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00436 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00478",
+    "object_id": "SIM-INV-POS-00436"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00437 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00479",
+    "object_id": "SIM-INV-POS-00437"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00437 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00480",
+    "object_id": "SIM-INV-POS-00437"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00438 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00481",
+    "object_id": "SIM-INV-POS-00438"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00438 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00482",
+    "object_id": "SIM-INV-POS-00438"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00439 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00483",
+    "object_id": "SIM-INV-POS-00439"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00439 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00484",
+    "object_id": "SIM-INV-POS-00439"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00440 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00485",
+    "object_id": "SIM-INV-POS-00440"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00440 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00486",
+    "object_id": "SIM-INV-POS-00440"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00441 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00487",
+    "object_id": "SIM-INV-POS-00441"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00441 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00488",
+    "object_id": "SIM-INV-POS-00441"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00442 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00489",
+    "object_id": "SIM-INV-POS-00442"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00442 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00490",
+    "object_id": "SIM-INV-POS-00442"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00443 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00491",
+    "object_id": "SIM-INV-POS-00443"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00443 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00492",
+    "object_id": "SIM-INV-POS-00443"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00444 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00493",
+    "object_id": "SIM-INV-POS-00444"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00444 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00494",
+    "object_id": "SIM-INV-POS-00444"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00445 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00495",
+    "object_id": "SIM-INV-POS-00445"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00446 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00496",
+    "object_id": "SIM-INV-POS-00446"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00446 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00497",
+    "object_id": "SIM-INV-POS-00446"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00447 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00498",
+    "object_id": "SIM-INV-POS-00447"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00447 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00499",
+    "object_id": "SIM-INV-POS-00447"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00448 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00500",
+    "object_id": "SIM-INV-POS-00448"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00448 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00501",
+    "object_id": "SIM-INV-POS-00448"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00449 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00502",
+    "object_id": "SIM-INV-POS-00449"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00449 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00503",
+    "object_id": "SIM-INV-POS-00449"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00450 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00504",
+    "object_id": "SIM-INV-POS-00450"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00450 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00505",
+    "object_id": "SIM-INV-POS-00450"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00451 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00506",
+    "object_id": "SIM-INV-POS-00451"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00451 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00507",
+    "object_id": "SIM-INV-POS-00451"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00452 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00508",
+    "object_id": "SIM-INV-POS-00452"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00452 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00509",
+    "object_id": "SIM-INV-POS-00452"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00453 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00510",
+    "object_id": "SIM-INV-POS-00453"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00453 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00511",
+    "object_id": "SIM-INV-POS-00453"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00454 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00512",
+    "object_id": "SIM-INV-POS-00454"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00455 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00513",
+    "object_id": "SIM-INV-POS-00455"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00455 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00514",
+    "object_id": "SIM-INV-POS-00455"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00456 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00515",
+    "object_id": "SIM-INV-POS-00456"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00456 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00516",
+    "object_id": "SIM-INV-POS-00456"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00457 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00517",
+    "object_id": "SIM-INV-POS-00457"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00457 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00518",
+    "object_id": "SIM-INV-POS-00457"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00458 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00519",
+    "object_id": "SIM-INV-POS-00458"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00458 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00520",
+    "object_id": "SIM-INV-POS-00458"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00459 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00521",
+    "object_id": "SIM-INV-POS-00459"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00459 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00522",
+    "object_id": "SIM-INV-POS-00459"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00460 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00523",
+    "object_id": "SIM-INV-POS-00460"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00460 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00524",
+    "object_id": "SIM-INV-POS-00460"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00461 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00525",
+    "object_id": "SIM-INV-POS-00461"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00461 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00526",
+    "object_id": "SIM-INV-POS-00461"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00462 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00527",
+    "object_id": "SIM-INV-POS-00462"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00462 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00528",
+    "object_id": "SIM-INV-POS-00462"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00463 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00529",
+    "object_id": "SIM-INV-POS-00463"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00464 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00530",
+    "object_id": "SIM-INV-POS-00464"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00464 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00531",
+    "object_id": "SIM-INV-POS-00464"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00465 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00532",
+    "object_id": "SIM-INV-POS-00465"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00465 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00533",
+    "object_id": "SIM-INV-POS-00465"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00466 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00534",
+    "object_id": "SIM-INV-POS-00466"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00466 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00535",
+    "object_id": "SIM-INV-POS-00466"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00467 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00536",
+    "object_id": "SIM-INV-POS-00467"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00467 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00537",
+    "object_id": "SIM-INV-POS-00467"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00468 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00538",
+    "object_id": "SIM-INV-POS-00468"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00468 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00539",
+    "object_id": "SIM-INV-POS-00468"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00469 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00540",
+    "object_id": "SIM-INV-POS-00469"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00469 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00541",
+    "object_id": "SIM-INV-POS-00469"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00470 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00542",
+    "object_id": "SIM-INV-POS-00470"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00470 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00543",
+    "object_id": "SIM-INV-POS-00470"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00471 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00544",
+    "object_id": "SIM-INV-POS-00471"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00471 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00545",
+    "object_id": "SIM-INV-POS-00471"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00472 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00546",
+    "object_id": "SIM-INV-POS-00472"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00473 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00547",
+    "object_id": "SIM-INV-POS-00473"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00473 (CORPORATE_BOND) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00548",
+    "object_id": "SIM-INV-POS-00473"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00474 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00549",
+    "object_id": "SIM-INV-POS-00474"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00474 (CORPORATE_BOND) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00550",
+    "object_id": "SIM-INV-POS-00474"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00475 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00551",
+    "object_id": "SIM-INV-POS-00475"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00475 (CORPORATE_BOND) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00552",
+    "object_id": "SIM-INV-POS-00475"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00476 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00553",
+    "object_id": "SIM-INV-POS-00476"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00476 (CORPORATE_BOND) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00554",
+    "object_id": "SIM-INV-POS-00476"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00477 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00555",
+    "object_id": "SIM-INV-POS-00477"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00477 (CORPORATE_BOND) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00556",
+    "object_id": "SIM-INV-POS-00477"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00478 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00557",
+    "object_id": "SIM-INV-POS-00478"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00478 (CORPORATE_BOND) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00558",
+    "object_id": "SIM-INV-POS-00478"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00479 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00559",
+    "object_id": "SIM-INV-POS-00479"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00479 (CORPORATE_BOND) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00560",
+    "object_id": "SIM-INV-POS-00479"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00480 (CORPORATE_BOND) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00561",
+    "object_id": "SIM-INV-POS-00480"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00480 (CORPORATE_BOND) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00562",
+    "object_id": "SIM-INV-POS-00480"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00481 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00563",
+    "object_id": "SIM-INV-POS-00481"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00482 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00564",
+    "object_id": "SIM-INV-POS-00482"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00482 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00565",
+    "object_id": "SIM-INV-POS-00482"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00483 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00566",
+    "object_id": "SIM-INV-POS-00483"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00483 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00567",
+    "object_id": "SIM-INV-POS-00483"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00484 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00568",
+    "object_id": "SIM-INV-POS-00484"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00484 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00569",
+    "object_id": "SIM-INV-POS-00484"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00485 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00570",
+    "object_id": "SIM-INV-POS-00485"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00485 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00571",
+    "object_id": "SIM-INV-POS-00485"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00486 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00572",
+    "object_id": "SIM-INV-POS-00486"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00486 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00573",
+    "object_id": "SIM-INV-POS-00486"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00487 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00574",
+    "object_id": "SIM-INV-POS-00487"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00487 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00575",
+    "object_id": "SIM-INV-POS-00487"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00488 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00576",
+    "object_id": "SIM-INV-POS-00488"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00488 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00577",
+    "object_id": "SIM-INV-POS-00488"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00489 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00578",
+    "object_id": "SIM-INV-POS-00489"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00489 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00579",
+    "object_id": "SIM-INV-POS-00489"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00490 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00580",
+    "object_id": "SIM-INV-POS-00490"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00491 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00581",
+    "object_id": "SIM-INV-POS-00491"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00491 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00582",
+    "object_id": "SIM-INV-POS-00491"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00492 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00583",
+    "object_id": "SIM-INV-POS-00492"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00492 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00584",
+    "object_id": "SIM-INV-POS-00492"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00493 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00585",
+    "object_id": "SIM-INV-POS-00493"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00493 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00586",
+    "object_id": "SIM-INV-POS-00493"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00494 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00587",
+    "object_id": "SIM-INV-POS-00494"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00494 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00588",
+    "object_id": "SIM-INV-POS-00494"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00495 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00589",
+    "object_id": "SIM-INV-POS-00495"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00495 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00590",
+    "object_id": "SIM-INV-POS-00495"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00496 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00591",
+    "object_id": "SIM-INV-POS-00496"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00496 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00592",
+    "object_id": "SIM-INV-POS-00496"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00497 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00593",
+    "object_id": "SIM-INV-POS-00497"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00497 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00594",
+    "object_id": "SIM-INV-POS-00497"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00498 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00595",
+    "object_id": "SIM-INV-POS-00498"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00498 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00596",
+    "object_id": "SIM-INV-POS-00498"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00499 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00597",
+    "object_id": "SIM-INV-POS-00499"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00500 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00598",
+    "object_id": "SIM-INV-POS-00500"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00500 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00599",
+    "object_id": "SIM-INV-POS-00500"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00501 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00600",
+    "object_id": "SIM-INV-POS-00501"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00501 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00601",
+    "object_id": "SIM-INV-POS-00501"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00502 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00602",
+    "object_id": "SIM-INV-POS-00502"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00502 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00603",
+    "object_id": "SIM-INV-POS-00502"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00503 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00604",
+    "object_id": "SIM-INV-POS-00503"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00503 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00605",
+    "object_id": "SIM-INV-POS-00503"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00504 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00606",
+    "object_id": "SIM-INV-POS-00504"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00504 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00607",
+    "object_id": "SIM-INV-POS-00504"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00505 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00608",
+    "object_id": "SIM-INV-POS-00505"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00505 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00609",
+    "object_id": "SIM-INV-POS-00505"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00506 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00610",
+    "object_id": "SIM-INV-POS-00506"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00506 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00611",
+    "object_id": "SIM-INV-POS-00506"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00507 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00612",
+    "object_id": "SIM-INV-POS-00507"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00507 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00613",
+    "object_id": "SIM-INV-POS-00507"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00508 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00614",
+    "object_id": "SIM-INV-POS-00508"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00509 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00615",
+    "object_id": "SIM-INV-POS-00509"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00509 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00616",
+    "object_id": "SIM-INV-POS-00509"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00510 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00617",
+    "object_id": "SIM-INV-POS-00510"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00510 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00618",
+    "object_id": "SIM-INV-POS-00510"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00511 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00619",
+    "object_id": "SIM-INV-POS-00511"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00511 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00620",
+    "object_id": "SIM-INV-POS-00511"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00512 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00621",
+    "object_id": "SIM-INV-POS-00512"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00512 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00622",
+    "object_id": "SIM-INV-POS-00512"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00513 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00623",
+    "object_id": "SIM-INV-POS-00513"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00513 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00624",
+    "object_id": "SIM-INV-POS-00513"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00514 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00625",
+    "object_id": "SIM-INV-POS-00514"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00514 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00626",
+    "object_id": "SIM-INV-POS-00514"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00515 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00627",
+    "object_id": "SIM-INV-POS-00515"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00515 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00628",
+    "object_id": "SIM-INV-POS-00515"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00516 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00629",
+    "object_id": "SIM-INV-POS-00516"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00516 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00630",
+    "object_id": "SIM-INV-POS-00516"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00517 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00631",
+    "object_id": "SIM-INV-POS-00517"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00518 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00632",
+    "object_id": "SIM-INV-POS-00518"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00518 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00633",
+    "object_id": "SIM-INV-POS-00518"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00519 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00634",
+    "object_id": "SIM-INV-POS-00519"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00519 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00635",
+    "object_id": "SIM-INV-POS-00519"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00520 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00636",
+    "object_id": "SIM-INV-POS-00520"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00520 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00637",
+    "object_id": "SIM-INV-POS-00520"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00521 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00638",
+    "object_id": "SIM-INV-POS-00521"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00521 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00639",
+    "object_id": "SIM-INV-POS-00521"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00522 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00640",
+    "object_id": "SIM-INV-POS-00522"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00522 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00641",
+    "object_id": "SIM-INV-POS-00522"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00523 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00642",
+    "object_id": "SIM-INV-POS-00523"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00523 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00643",
+    "object_id": "SIM-INV-POS-00523"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00524 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00644",
+    "object_id": "SIM-INV-POS-00524"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00524 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00645",
+    "object_id": "SIM-INV-POS-00524"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00525 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00646",
+    "object_id": "SIM-INV-POS-00525"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00525 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00647",
+    "object_id": "SIM-INV-POS-00525"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00526 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00648",
+    "object_id": "SIM-INV-POS-00526"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00527 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00649",
+    "object_id": "SIM-INV-POS-00527"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00527 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00650",
+    "object_id": "SIM-INV-POS-00527"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00528 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00651",
+    "object_id": "SIM-INV-POS-00528"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00528 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00652",
+    "object_id": "SIM-INV-POS-00528"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00529 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00653",
+    "object_id": "SIM-INV-POS-00529"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00529 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00654",
+    "object_id": "SIM-INV-POS-00529"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00530 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00655",
+    "object_id": "SIM-INV-POS-00530"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00530 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00656",
+    "object_id": "SIM-INV-POS-00530"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00531 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00657",
+    "object_id": "SIM-INV-POS-00531"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00531 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00658",
+    "object_id": "SIM-INV-POS-00531"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00532 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00659",
+    "object_id": "SIM-INV-POS-00532"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00532 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00660",
+    "object_id": "SIM-INV-POS-00532"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00533 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00661",
+    "object_id": "SIM-INV-POS-00533"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00533 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00662",
+    "object_id": "SIM-INV-POS-00533"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00534 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00663",
+    "object_id": "SIM-INV-POS-00534"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00534 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00664",
+    "object_id": "SIM-INV-POS-00534"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00535 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00665",
+    "object_id": "SIM-INV-POS-00535"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00536 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00666",
+    "object_id": "SIM-INV-POS-00536"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00536 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00667",
+    "object_id": "SIM-INV-POS-00536"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00537 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00668",
+    "object_id": "SIM-INV-POS-00537"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00537 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00669",
+    "object_id": "SIM-INV-POS-00537"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00538 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00670",
+    "object_id": "SIM-INV-POS-00538"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00538 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00671",
+    "object_id": "SIM-INV-POS-00538"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00539 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00672",
+    "object_id": "SIM-INV-POS-00539"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00539 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00673",
+    "object_id": "SIM-INV-POS-00539"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00540 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00674",
+    "object_id": "SIM-INV-POS-00540"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00540 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00675",
+    "object_id": "SIM-INV-POS-00540"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00541 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00676",
+    "object_id": "SIM-INV-POS-00541"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00541 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00677",
+    "object_id": "SIM-INV-POS-00541"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00542 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00678",
+    "object_id": "SIM-INV-POS-00542"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00542 (EQUITY) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00679",
+    "object_id": "SIM-INV-POS-00542"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00543 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00680",
+    "object_id": "SIM-INV-POS-00543"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00543 (EQUITY) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00681",
+    "object_id": "SIM-INV-POS-00543"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00544 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00682",
+    "object_id": "SIM-INV-POS-00544"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00545 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00683",
+    "object_id": "SIM-INV-POS-00545"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00545 (EQUITY) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00684",
+    "object_id": "SIM-INV-POS-00545"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00546 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00685",
+    "object_id": "SIM-INV-POS-00546"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00546 (EQUITY) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00686",
+    "object_id": "SIM-INV-POS-00546"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00547 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00687",
+    "object_id": "SIM-INV-POS-00547"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00547 (EQUITY) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00688",
+    "object_id": "SIM-INV-POS-00547"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00548 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00689",
+    "object_id": "SIM-INV-POS-00548"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00548 (EQUITY) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00690",
+    "object_id": "SIM-INV-POS-00548"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00549 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00691",
+    "object_id": "SIM-INV-POS-00549"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00549 (EQUITY) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00692",
+    "object_id": "SIM-INV-POS-00549"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00550 (EQUITY) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00693",
+    "object_id": "SIM-INV-POS-00550"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00550 (EQUITY) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00694",
+    "object_id": "SIM-INV-POS-00550"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00551 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00695",
+    "object_id": "SIM-INV-POS-00551"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00552 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00696",
+    "object_id": "SIM-INV-POS-00552"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00552 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00697",
+    "object_id": "SIM-INV-POS-00552"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00553 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00698",
+    "object_id": "SIM-INV-POS-00553"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00553 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00699",
+    "object_id": "SIM-INV-POS-00553"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00554 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00700",
+    "object_id": "SIM-INV-POS-00554"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00554 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00701",
+    "object_id": "SIM-INV-POS-00554"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00555 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00702",
+    "object_id": "SIM-INV-POS-00555"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00555 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00703",
+    "object_id": "SIM-INV-POS-00555"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00556 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00704",
+    "object_id": "SIM-INV-POS-00556"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00556 (GOLD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00705",
+    "object_id": "SIM-INV-POS-00556"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00557 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00706",
+    "object_id": "SIM-INV-POS-00557"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00557 (GOLD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00707",
+    "object_id": "SIM-INV-POS-00557"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00558 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00708",
+    "object_id": "SIM-INV-POS-00558"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00558 (GOLD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00709",
+    "object_id": "SIM-INV-POS-00558"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00559 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00710",
+    "object_id": "SIM-INV-POS-00559"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00559 (GOLD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00711",
+    "object_id": "SIM-INV-POS-00559"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00560 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00712",
+    "object_id": "SIM-INV-POS-00560"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00561 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00713",
+    "object_id": "SIM-INV-POS-00561"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00561 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00714",
+    "object_id": "SIM-INV-POS-00561"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00562 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00715",
+    "object_id": "SIM-INV-POS-00562"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00562 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00716",
+    "object_id": "SIM-INV-POS-00562"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00563 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00717",
+    "object_id": "SIM-INV-POS-00563"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00563 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00718",
+    "object_id": "SIM-INV-POS-00563"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00564 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00719",
+    "object_id": "SIM-INV-POS-00564"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00564 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00720",
+    "object_id": "SIM-INV-POS-00564"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00565 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00721",
+    "object_id": "SIM-INV-POS-00565"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00565 (GOLD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00722",
+    "object_id": "SIM-INV-POS-00565"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00566 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00723",
+    "object_id": "SIM-INV-POS-00566"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00566 (GOLD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00724",
+    "object_id": "SIM-INV-POS-00566"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00567 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00725",
+    "object_id": "SIM-INV-POS-00567"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00567 (GOLD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00726",
+    "object_id": "SIM-INV-POS-00567"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00568 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00727",
+    "object_id": "SIM-INV-POS-00568"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00568 (GOLD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00728",
+    "object_id": "SIM-INV-POS-00568"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00569 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00729",
+    "object_id": "SIM-INV-POS-00569"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00570 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00730",
+    "object_id": "SIM-INV-POS-00570"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00570 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00731",
+    "object_id": "SIM-INV-POS-00570"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00571 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00732",
+    "object_id": "SIM-INV-POS-00571"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00571 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00733",
+    "object_id": "SIM-INV-POS-00571"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00572 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00734",
+    "object_id": "SIM-INV-POS-00572"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00572 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00735",
+    "object_id": "SIM-INV-POS-00572"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00573 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00736",
+    "object_id": "SIM-INV-POS-00573"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00573 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00737",
+    "object_id": "SIM-INV-POS-00573"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00574 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00738",
+    "object_id": "SIM-INV-POS-00574"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00574 (GOLD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00739",
+    "object_id": "SIM-INV-POS-00574"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00575 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00740",
+    "object_id": "SIM-INV-POS-00575"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00575 (GOLD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00741",
+    "object_id": "SIM-INV-POS-00575"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00576 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00742",
+    "object_id": "SIM-INV-POS-00576"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00576 (GOLD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00743",
+    "object_id": "SIM-INV-POS-00576"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00577 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00744",
+    "object_id": "SIM-INV-POS-00577"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00577 (GOLD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00745",
+    "object_id": "SIM-INV-POS-00577"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00578 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00746",
+    "object_id": "SIM-INV-POS-00578"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00579 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00747",
+    "object_id": "SIM-INV-POS-00579"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00579 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00748",
+    "object_id": "SIM-INV-POS-00579"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00580 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00749",
+    "object_id": "SIM-INV-POS-00580"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00580 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00750",
+    "object_id": "SIM-INV-POS-00580"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00581 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00751",
+    "object_id": "SIM-INV-POS-00581"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00581 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00752",
+    "object_id": "SIM-INV-POS-00581"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00582 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00753",
+    "object_id": "SIM-INV-POS-00582"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00582 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00754",
+    "object_id": "SIM-INV-POS-00582"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00583 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00755",
+    "object_id": "SIM-INV-POS-00583"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00583 (GOLD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00756",
+    "object_id": "SIM-INV-POS-00583"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00584 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00757",
+    "object_id": "SIM-INV-POS-00584"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00584 (GOLD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00758",
+    "object_id": "SIM-INV-POS-00584"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00585 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00759",
+    "object_id": "SIM-INV-POS-00585"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00585 (GOLD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00760",
+    "object_id": "SIM-INV-POS-00585"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00586 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00761",
+    "object_id": "SIM-INV-POS-00586"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00586 (GOLD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00762",
+    "object_id": "SIM-INV-POS-00586"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00587 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00763",
+    "object_id": "SIM-INV-POS-00587"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00588 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00764",
+    "object_id": "SIM-INV-POS-00588"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00588 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00765",
+    "object_id": "SIM-INV-POS-00588"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00589 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00766",
+    "object_id": "SIM-INV-POS-00589"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00589 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00767",
+    "object_id": "SIM-INV-POS-00589"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00590 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00768",
+    "object_id": "SIM-INV-POS-00590"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00590 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00769",
+    "object_id": "SIM-INV-POS-00590"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00591 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00770",
+    "object_id": "SIM-INV-POS-00591"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00591 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00771",
+    "object_id": "SIM-INV-POS-00591"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00592 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00772",
+    "object_id": "SIM-INV-POS-00592"
+  },
+  {
+    "case_type": "PENDING",
+    "description": "Position SIM-INV-POS-00592 (GOLD) is tagged PENDING.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00773",
+    "object_id": "SIM-INV-POS-00592"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00593 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00774",
+    "object_id": "SIM-INV-POS-00593"
+  },
+  {
+    "case_type": "RESERVED",
+    "description": "Position SIM-INV-POS-00593 (GOLD) is tagged RESERVED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00775",
+    "object_id": "SIM-INV-POS-00593"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00594 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00776",
+    "object_id": "SIM-INV-POS-00594"
+  },
+  {
+    "case_type": "RECALLED",
+    "description": "Position SIM-INV-POS-00594 (GOLD) is tagged RECALLED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00777",
+    "object_id": "SIM-INV-POS-00594"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00595 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00778",
+    "object_id": "SIM-INV-POS-00595"
+  },
+  {
+    "case_type": "MIN_LOT_CONFLICT",
+    "description": "Position SIM-INV-POS-00595 (GOLD) is tagged MIN_LOT_CONFLICT.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00779",
+    "object_id": "SIM-INV-POS-00595"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00596 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00780",
+    "object_id": "SIM-INV-POS-00596"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00597 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00781",
+    "object_id": "SIM-INV-POS-00597"
+  },
+  {
+    "case_type": "WRONG_WAY",
+    "description": "Position SIM-INV-POS-00597 (GOLD) is tagged WRONG_WAY.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00782",
+    "object_id": "SIM-INV-POS-00597"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00598 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00783",
+    "object_id": "SIM-INV-POS-00598"
+  },
+  {
+    "case_type": "STALE_PRICE",
+    "description": "Position SIM-INV-POS-00598 (GOLD) is tagged STALE_PRICE.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00784",
+    "object_id": "SIM-INV-POS-00598"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00599 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00785",
+    "object_id": "SIM-INV-POS-00599"
+  },
+  {
+    "case_type": "WRONG_LOCATION",
+    "description": "Position SIM-INV-POS-00599 (GOLD) is tagged WRONG_LOCATION.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00786",
+    "object_id": "SIM-INV-POS-00599"
+  },
+  {
+    "case_type": "INELIGIBLE_ASSET_CLASS",
+    "description": "Position SIM-INV-POS-00600 (GOLD) is tagged INELIGIBLE_ASSET_CLASS.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00787",
+    "object_id": "SIM-INV-POS-00600"
+  },
+  {
+    "case_type": "ENCUMBERED",
+    "description": "Position SIM-INV-POS-00600 (GOLD) is tagged ENCUMBERED.",
+    "domain": "INVENTORY",
+    "index_id": "SIM-ADV-INV-00788",
+    "object_id": "SIM-INV-POS-00600"
+  }
+]

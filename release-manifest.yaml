@@ -1,0 +1,41 @@
+generated_at: '2026-09-13T03:39:30.970938+00:00'
+git:
+  commit: null
+  dirty: null
+  reason: not_a_git_repository_or_git_unavailable
+dependency_lockfile:
+  sha256: 3da252fc915d4716eb5915a4277fc0b76fd42cfdbb4819b58b2853a45e0e815f
+  reason: null
+python:
+  version: 3.12.14
+  declared_target: 3.13-supported (plan Section 5); running 3.12 venv this session,
+    see docs/INTERPRETATION.md item 2.3
+os_arch:
+  platform: win32
+database_migration_heads:
+  clauseos: present_not_parsed
+  riskos: present_not_parsed
+  collateralos: present_not_parsed
+test_report:
+  passed: 319
+  failed: 0
+  skipped: 2
+  report_digest: 87052cb78368bb33311f5dfbae8cefabf422f63154a2939b985042e398bc0658
+  reason: null
+image_digests:
+  value: null
+  reason: 'not_yet_implemented: no container image build in this session'
+sbom_digest:
+  value: null
+  reason: 'not_yet_implemented: pip-audit/syft wiring is backlog'
+solver:
+  value: null
+  reason: 'not_yet_implemented: populated by CollateralOS''s own release step once
+    its adapter records which backend (highspy vs scipy HiGHS) was used'
+supported_products:
+- clauseos
+- riskos
+- collateralos
+federation_layer: cassandre_control_api (optional)
+pilot_stage: "S1 controlled simulation initial slice only (plan Section 1.4) \u2014\
+  \ NOT S1 acceptance-grade, NOT S2"

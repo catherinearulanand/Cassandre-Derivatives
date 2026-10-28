@@ -1,0 +1,28 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-009",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "Side letter shortens the notification deadline from 2 to 1 Business Day; ground truth reflects the side letter, not the original CSA text.",
+    "notification_deadline_business_days": 1,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": true,
+    "threshold_calculation_party": "500000.00",
+    "threshold_counterparty": "500000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "8c0718096b8152fa421950a4bd50ed268df96f575017671ad718bce42c9db64c"
+}

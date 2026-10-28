@@ -1,0 +1,152 @@
+[
+  {
+    "as_of": "2026-01-06T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-001"
+  },
+  {
+    "as_of": "2026-01-07T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-002"
+  },
+  {
+    "as_of": "2026-01-08T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-003"
+  },
+  {
+    "as_of": "2026-01-09T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-004"
+  },
+  {
+    "as_of": "2026-01-10T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-005"
+  },
+  {
+    "as_of": "2026-01-11T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-006"
+  },
+  {
+    "as_of": "2026-01-12T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-007"
+  },
+  {
+    "as_of": "2026-01-13T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-008"
+  },
+  {
+    "as_of": "2026-01-14T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-009"
+  },
+  {
+    "as_of": "2026-01-15T17:00:00Z",
+    "regime": "QUIET",
+    "snapshot_id": "SIM-MKT-SNAP-010"
+  },
+  {
+    "as_of": "2026-01-16T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-011"
+  },
+  {
+    "as_of": "2026-01-17T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-012"
+  },
+  {
+    "as_of": "2026-01-18T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-013"
+  },
+  {
+    "as_of": "2026-01-19T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-014"
+  },
+  {
+    "as_of": "2026-01-20T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-015"
+  },
+  {
+    "as_of": "2026-01-21T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-016"
+  },
+  {
+    "as_of": "2026-01-22T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-017"
+  },
+  {
+    "as_of": "2026-01-23T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-018"
+  },
+  {
+    "as_of": "2026-01-24T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-019"
+  },
+  {
+    "as_of": "2026-01-25T17:00:00Z",
+    "regime": "RATE_SHOCK",
+    "snapshot_id": "SIM-MKT-SNAP-020"
+  },
+  {
+    "as_of": "2026-01-26T17:00:00Z",
+    "regime": "FX_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-021"
+  },
+  {
+    "as_of": "2026-01-27T17:00:00Z",
+    "regime": "FX_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-022"
+  },
+  {
+    "as_of": "2026-01-28T17:00:00Z",
+    "regime": "FX_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-023"
+  },
+  {
+    "as_of": "2026-01-29T17:00:00Z",
+    "regime": "FX_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-024"
+  },
+  {
+    "as_of": "2026-01-30T17:00:00Z",
+    "regime": "FX_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-025"
+  },
+  {
+    "as_of": "2026-01-31T17:00:00Z",
+    "regime": "COMBINED_LIQUIDITY_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-026"
+  },
+  {
+    "as_of": "2026-02-01T17:00:00Z",
+    "regime": "COMBINED_LIQUIDITY_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-027"
+  },
+  {
+    "as_of": "2026-02-02T17:00:00Z",
+    "regime": "COMBINED_LIQUIDITY_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-028"
+  },
+  {
+    "as_of": "2026-02-03T17:00:00Z",
+    "regime": "COMBINED_LIQUIDITY_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-029"
+  },
+  {
+    "as_of": "2026-02-04T17:00:00Z",
+    "regime": "COMBINED_LIQUIDITY_STRESS",
+    "snapshot_id": "SIM-MKT-SNAP-030"
+  }
+]

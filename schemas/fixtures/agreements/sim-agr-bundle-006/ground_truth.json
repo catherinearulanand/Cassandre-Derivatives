@@ -1,0 +1,28 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-006",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "Explicit MTA-before-rounding election, matching METHOD-PACK-001's provisional convention (DEC-RSK-01).",
+    "notification_deadline_business_days": 2,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": "500000.00",
+    "threshold_counterparty": "500000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "4c225b0faef0f65e15e96a012560147aeabf05c790a5ea3627830084f2ffa998"
+}

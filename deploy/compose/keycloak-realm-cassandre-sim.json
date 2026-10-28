@@ -1,0 +1,132 @@
+{
+  "realm": "cassandre-sim",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "roles": {
+    "realm": [
+      { "name": "clause_maker" },
+      { "name": "clause_checker" },
+      { "name": "risk_terms_maker" },
+      { "name": "risk_terms_checker" },
+      { "name": "risk_operator" },
+      { "name": "risk_method_owner" },
+      { "name": "risk_validator" },
+      { "name": "collateral_policy_maker" },
+      { "name": "collateral_policy_checker" },
+      { "name": "inventory_operator" },
+      { "name": "collateral_maker" },
+      { "name": "collateral_checker" },
+      { "name": "static_data_maker" },
+      { "name": "static_data_checker" },
+      { "name": "auditor" },
+      { "name": "pilot_admin" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "clauseos-api",
+      "publicClient": false,
+      "secret": "clauseos-dev-only-change-me",
+      "redirectUris": ["*"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "riskos-api",
+      "publicClient": false,
+      "secret": "riskos-dev-only-change-me",
+      "redirectUris": ["*"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "collateralos-api",
+      "publicClient": false,
+      "secret": "collateralos-dev-only-change-me",
+      "redirectUris": ["*"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "cassandre-control-api",
+      "publicClient": false,
+      "secret": "cassandre-control-dev-only-change-me",
+      "redirectUris": ["*"],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "sim-clause-maker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["clause_maker"]
+    },
+    {
+      "username": "sim-clause-checker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["clause_checker"]
+    },
+    {
+      "username": "sim-risk-terms-maker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["risk_terms_maker"]
+    },
+    {
+      "username": "sim-risk-terms-checker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["risk_terms_checker"]
+    },
+    {
+      "username": "sim-risk-validator-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["risk_validator"]
+    },
+    {
+      "username": "sim-collateral-policy-maker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["collateral_policy_maker"]
+    },
+    {
+      "username": "sim-collateral-policy-checker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["collateral_policy_checker"]
+    },
+    {
+      "username": "sim-collateral-maker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["collateral_maker"]
+    },
+    {
+      "username": "sim-collateral-checker-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["collateral_checker"]
+    },
+    {
+      "username": "sim-auditor-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["auditor"]
+    },
+    {
+      "username": "sim-pilot-admin-1",
+      "enabled": true,
+      "credentials": [{ "type": "password", "value": "sim-dev-only", "temporary": false }],
+      "realmRoles": ["pilot_admin"]
+    }
+  ]
+}

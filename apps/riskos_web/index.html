@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RiskOS Control UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>RiskOS &mdash; internal control workflow</h1>
+    <p>Synthetic SIM-* data only. Every action below calls the real RiskOS API (no mocked data). Not a production UI.
+      <strong>STATUS: PROVISIONAL / SIMULATION-ONLY</strong> &mdash; see <code>products/riskos/README.md</code>.</p>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="readiness" class="active">Input readiness</button>
+    <button data-tab="membership">Entity / netting-set</button>
+    <button data-tab="run">Margin run &amp; waterfall</button>
+    <button data-tab="drilldown">Trade drilldown</button>
+    <button data-tab="reconciliation">Reconciliation</button>
+    <button data-tab="methodpack">Method pack</button>
+    <button data-tab="challenger">Challenger comparison</button>
+    <button data-tab="replay">Historical replay</button>
+    <button data-tab="export">Evidence export</button>
+  </nav>
+
+  <main>
+
+    <!-- ============================== INPUT READINESS ============================== -->
+    <section class="panel active" id="panel-readiness">
+      <h2>Input-package readiness and freshness</h2>
+      <div class="note">
+        There is no list endpoint for ingested packages in this slice &mdash; look one up by its id. Freshness is
+        judged client-side against the <code>FRESHNESS_WINDOW_HOURS = 24</code> constant
+        (<code>DEC-OPS-03</code>, <code>products/riskos/src/riskos/core/constants.py</code>), the same window
+        <code>riskos.core.gates.run_freshness_gate</code> enforces server-side for a MARGIN_CALL run.
+      </div>
+
+      <form id="form-lookup-portfolio" class="inline">
+        <label>Portfolio snapshot ID <input name="id" placeholder="SIM-PORTFOLIO-0001" required /></label>
+        <button class="action" type="submit">GET /v1/portfolio-snapshots/&#123;id&#125;</button>
+      </form>
+      <div id="result-readiness-portfolio" class="readiness-box"></div>
+
+      <form id="form-lookup-collateral" class="inline">
+        <label>Collateral package ID <input name="id" placeholder="SIM-COLLATERAL-0001" required /></label>
+        <button class="action" type="submit">GET /v1/collateral-state-packages/&#123;id&#125;</button>
+      </form>
+      <div id="result-readiness-collateral" class="readiness-box"></div>
+
+      <form id="form-lookup-market" class="inline">
+        <label>Market snapshot ID <input name="id" placeholder="SIM-MKT-IRS-0001" required /></label>
+        <button class="action" type="submit">GET /v1/market-snapshots/&#123;id&#125;</button>
+      </form>
+      <div id="result-readiness-market" class="readiness-box"></div>
+    </section>
+
+    <!-- ============================== MEMBERSHIP ============================== -->
+    <section class="panel" id="panel-membership">
+      <h2>Entity / netting-set membership</h2>
+
+      <h3>Netting sets</h3>
+      <div class="row-actions"><button class="action secondary" id="btn-load-netting-sets" type="button">GET /v1/netting-set-versions</button></div>
+      <table id="table-netting-sets">
+        <thead><tr><th>netting_set_id</th><th>calculation_entity_id</th><th>counterparty_entity_id</th><th>governing_agreement_id</th><th>approved</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Legal entities</h3>
+      <div class="row-actions"><button class="action secondary" id="btn-load-legal-entities" type="button">GET /v1/legal-entity-versions</button></div>
+      <table id="table-legal-entities">
+        <thead><tr><th>entity_id</th><th>display_name</th><th>home_currency</th><th>is_active_calculation_entity</th><th>approved</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== MARGIN RUN & WATERFALL ============================== -->
+    <section class="panel" id="panel-run">
+      <h2>Margin run and waterfall</h2>
+      <div class="note">
+        Plan Section 11.7 requires all five status dimensions shown together, never collapsed into one
+        success/fail indicator. They are rendered as five separate labeled fields below &mdash; not one badge.
+      </div>
+
+      <form id="form-run-create" class="wide">
+        <label>Run ID <input name="run_id" placeholder="SIM-RUN-UI-0001" required /></label>
+        <label>Purpose
+          <select name="purpose">
+            <option value="MARGIN_CALL" selected>MARGIN_CALL</option>
+            <option value="CHALLENGER">CHALLENGER (rejected here &mdash; use the Challenger comparison tab)</option>
+            <option value="VALUATION_CONTROL">VALUATION_CONTROL (unsupported by this build)</option>
+            <option value="STRESS">STRESS (unsupported by this build)</option>
+            <option value="SENSITIVITY">SENSITIVITY (unsupported by this build)</option>
+          </select>
+        </label>
+        <label>Calculation entity ID <input name="calculation_entity_id" required /></label>
+        <label>Counterparty entity ID <input name="counterparty_entity_id" required /></label>
+        <label>Agreement ID <input name="agreement_id" required /></label>
+        <label>Portfolio snapshot ID <input name="portfolio_snapshot_id" required /></label>
+        <label>Collateral package ID <input name="collateral_package_id" required /></label>
+        <hr />
+        <p><strong>Source-control manifest</strong> (must match the ingested portfolio's resolved population)</p>
+        <label>Manifest ID <input name="manifest_id" value="SIM-MANIFEST-0001" required /></label>
+        <label>Expected accepted count <input name="expected_accepted_count" type="number" value="5" required /></label>
+        <label>Expected accepted MTM total <input name="expected_accepted_mtm_total" placeholder="100536.00" required /></label>
+        <label>Expected rejected/duplicate/matured/cancelled/amended/unsupported (comma-separated, default 0)
+          <input name="expected_other_counts" placeholder="0,0,0,0,0,0" />
+        </label>
+        <hr />
+        <p><strong>Counterparty call (for immediate reconciliation)</strong></p>
+        <label>Call status
+          <select name="cp_call_status">
+            <option value="DELIVER" selected>DELIVER</option>
+            <option value="RETURN">RETURN</option>
+            <option value="NO_TRANSFER">NO_TRANSFER</option>
+          </select>
+        </label>
+        <label>Call amount <input name="cp_call_amount" placeholder="45536.00" required /></label>
+        <label>Call currency <input name="cp_call_currency" value="USD" required /></label>
+        <button class="action" type="submit">POST /v1/calculation-runs</button>
+      </form>
+      <div id="result-run-create" class="result-box" hidden></div>
+
+      <hr />
+      <form id="form-run-lookup" class="inline">
+        <label>Run ID to look up <input name="run_id" placeholder="SIM-RUN-UI-0001" required /></label>
+        <button class="action" type="submit">Load run + waterfall</button>
+      </form>
+
+      <div id="run-status-grid" class="status-grid" hidden>
+        <div class="status-cell"><span>calculation_status</span><strong id="status-calculation"></strong></div>
+        <div class="status-cell"><span>data_quality_status</span><strong id="status-data-quality"></strong></div>
+        <div class="status-cell"><span>reconciliation_status</span><strong id="status-reconciliation"></strong></div>
+        <div class="status-cell"><span>validation_status</span><strong id="status-validation"></strong></div>
+        <div class="status-cell"><span>actionability</span><strong id="status-actionability"></strong></div>
+      </div>
+      <div id="result-run-lookup" class="result-box" hidden></div>
+      <table id="table-waterfall" hidden>
+        <thead><tr><th>step</th><th>value</th><th>note</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== TRADE DRILLDOWN ============================== -->
+    <section class="panel" id="panel-drilldown">
+      <h2>Trade-to-total drilldown</h2>
+      <div class="note">
+        Loads a portfolio snapshot's individual trades and sums accepted-trade MTM client-side; optionally
+        cross-checks that sum against a calculation run's waterfall <code>exposure</code> figure.
+      </div>
+      <form id="form-drilldown" class="inline">
+        <label>Portfolio snapshot ID <input name="snapshot_id" placeholder="SIM-PORTFOLIO-0001" required /></label>
+        <label>Run ID (optional, for cross-check) <input name="run_id" placeholder="SIM-RUN-UI-0001" /></label>
+        <button class="action" type="submit">Load</button>
+      </form>
+      <div id="result-drilldown-status"></div>
+      <table id="table-drilldown">
+        <thead><tr><th>trade_id</th><th>product_family</th><th>disposition</th><th>lifecycle_state</th><th>mtm</th></tr></thead>
+        <tbody></tbody>
+        <tfoot><tr><td colspan="4">Sum of ACCEPTED trade MTM</td><td id="drilldown-total"></td></tr></tfoot>
+      </table>
+    </section>
+
+    <!-- ============================== RECONCILIATION ============================== -->
+    <section class="panel" id="panel-reconciliation">
+      <h2>Reconciliation breaks and undisputed amount</h2>
+      <form id="form-reconciliation" class="wide">
+        <label>Run ID <input name="run_id" placeholder="SIM-RUN-UI-0001" required /></label>
+        <label>Counterparty party label <input name="party_label" value="COUNTERPARTY" /></label>
+        <label>Call status
+          <select name="call_status">
+            <option value="DELIVER" selected>DELIVER</option>
+            <option value="RETURN">RETURN</option>
+            <option value="NO_TRANSFER">NO_TRANSFER</option>
+          </select>
+        </label>
+        <label>Call amount <input name="call_amount" placeholder="45536.00" required /></label>
+        <label>Call currency <input name="call_currency" value="USD" required /></label>
+        <label>Responded? <input name="responded" type="checkbox" checked /></label>
+        <button class="action" type="submit">POST /v1/reconciliations</button>
+      </form>
+      <div id="result-reconciliation" class="result-box" hidden></div>
+
+      <hr />
+      <form id="form-reconciliation-lookup" class="inline">
+        <label>Case ID <input name="case_id" placeholder="RECON-SIM-RUN-UI-0001" required /></label>
+        <button class="action" type="submit">GET /v1/reconciliation-cases/&#123;case_id&#125;</button>
+      </form>
+      <div id="result-reconciliation-lookup" class="result-box" hidden></div>
+      <table id="table-breaks" hidden>
+        <thead><tr><th>break_type</th><th>description</th><th>calc party amount</th><th>counterparty amount</th><th>difference</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== METHOD PACK / SUPPORT MATRIX ============================== -->
+    <section class="panel" id="panel-methodpack">
+      <h2>Method pack and support matrix</h2>
+      <div class="row-actions"><button class="action secondary" id="btn-load-method-packs" type="button">GET /v1/method-packs</button></div>
+      <table id="table-method-packs">
+        <thead><tr><th>method_id</th><th>version</th><th>call_currency</th><th>MTA</th><th>validation_status</th><th>provisional</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Calculation-purpose support matrix</h3>
+      <div class="note">
+        There is no live <code>GET /v1/support-matrix</code> endpoint in this slice (plan 11.8 lists it as a
+        stretch API). This table is derived directly from reading
+        <code>riskos.core.gates.run_support_matrix_gate</code> and
+        <code>riskos.core.challenger_workflow</code> &mdash; not a live query &mdash; and is labelled as such
+        rather than fabricating a matrix endpoint that does not exist.
+      </div>
+      <table>
+        <thead><tr><th>purpose</th><th>status</th><th>path</th></tr></thead>
+        <tbody>
+          <tr><td>MARGIN_CALL</td><td class="ok">SUPPORTED</td><td><code>riskos.core.workflow.execute_margin_call</code></td></tr>
+          <tr><td>CHALLENGER</td><td class="ok">SUPPORTED (additive, indicative-only; RSK-X01)</td><td><code>riskos.core.challenger_workflow.execute_challenger_run</code></td></tr>
+          <tr><td>VALUATION_CONTROL</td><td class="no">UNSUPPORTED</td><td>rejected by <code>run_support_matrix_gate</code></td></tr>
+          <tr><td>STRESS</td><td class="no">UNSUPPORTED</td><td>rejected by <code>run_support_matrix_gate</code></td></tr>
+          <tr><td>SENSITIVITY</td><td class="no">UNSUPPORTED</td><td>rejected by <code>run_support_matrix_gate</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============================== CHALLENGER COMPARISON ============================== -->
+    <section class="panel" id="panel-challenger">
+      <h2>RSK-X01 native valuation challenger comparison</h2>
+      <div class="note">
+        <strong>PROVISIONAL / ADDITIVE (DEC-RSK-02)</strong>: a <code>CHALLENGER</code> run never replaces, gates,
+        or blocks the MARGIN_CALL workflow above &mdash; it is stored separately and its <code>actionability</code>
+        is always <code>INDICATIVE_ONLY</code>. See
+        <code>docs/methods/RSK-X01-challenger-provisional.md</code>.
+      </div>
+
+      <h3>1. Pin a market snapshot</h3>
+      <form id="form-market-snapshot" class="wide">
+        <label>Snapshot ID <input name="snapshot_id" value="SIM-MKT-UI-0001" required /></label>
+        <label>As-of (date) <input name="as_of" type="date" required /></label>
+        <label>Calendars (comma-separated) <input name="calendars" value="SIM.NONE" /></label>
+        <label>Discount curves (JSON array of {currency, points:[{tenor_years, zero_rate}]})
+          <textarea name="discount_curves_json">[
+  {"currency": "USD", "points": [{"tenor_years": "1", "zero_rate": "0.03"}]},
+  {"currency": "EUR", "points": [{"tenor_years": "1", "zero_rate": "0.02"}]}
+]</textarea>
+        </label>
+        <label>FX spot rates (JSON array of {base_currency, quote_currency, rate}, optional)
+          <textarea name="fx_spot_rates_json">[{"base_currency": "EUR", "quote_currency": "USD", "rate": "1.10"}]</textarea>
+        </label>
+        <button class="action" type="submit">POST /v1/market-snapshots</button>
+      </form>
+      <div id="result-market-snapshot" class="result-box" hidden></div>
+
+      <h3>2. Run the challenger</h3>
+      <form id="form-challenger-run" class="wide">
+        <label>Run ID <input name="run_id" value="SIM-CHALLENGER-RUN-UI-0001" required /></label>
+        <label>Netting set ID <input name="netting_set_id" required /></label>
+        <label>Market snapshot ID <input name="market_snapshot_id" value="SIM-MKT-UI-0001" required /></label>
+        <label>As-of (date) <input name="as_of" type="date" required /></label>
+        <label>Portfolio snapshot ID (optional, for incumbent-MTM comparison) <input name="portfolio_snapshot_id" /></label>
+        <label>IRS trades (JSON array, optional)
+          <textarea name="irs_trades_json">[]</textarea>
+        </label>
+        <label>FX forward trades (JSON array, optional)
+          <textarea name="fx_forward_trades_json">[]</textarea>
+        </label>
+        <button class="action" type="submit">POST /v1/challenger-runs</button>
+      </form>
+      <div id="result-challenger-run" class="result-box" hidden></div>
+
+      <div id="challenger-status-grid" class="status-grid" hidden>
+        <div class="status-cell"><span>calculation_status</span><strong id="challenger-status-calculation"></strong></div>
+        <div class="status-cell"><span>data_quality_status</span><strong id="challenger-status-data-quality"></strong></div>
+        <div class="status-cell"><span>reconciliation_status</span><strong id="challenger-status-reconciliation"></strong></div>
+        <div class="status-cell"><span>validation_status</span><strong id="challenger-status-validation"></strong></div>
+        <div class="status-cell"><span>actionability</span><strong id="challenger-status-actionability" class="indicative"></strong></div>
+      </div>
+      <table id="table-challenger-comparisons" hidden>
+        <thead><tr><th>trade_id</th><th>product_family</th><th>challenger_pv</th><th>incumbent_pv</th><th>difference</th><th>tolerance</th><th>status</th><th>note</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <hr />
+      <form id="form-challenger-lookup" class="inline">
+        <label>Challenger run ID <input name="run_id" placeholder="SIM-CHALLENGER-RUN-UI-0001" required /></label>
+        <button class="action" type="submit">GET /v1/challenger-runs/&#123;run_id&#125;</button>
+      </form>
+    </section>
+
+    <!-- ============================== HISTORICAL REPLAY (PLACEHOLDER) ============================== -->
+    <section class="panel" id="panel-replay">
+      <h2>Historical &ldquo;known then / corrected now&rdquo; replay</h2>
+      <div class="placeholder">
+        <strong>Not yet implemented.</strong> Plan Section 11.9 lists this as a RiskOS UI page, backed by plan
+        Section 8.3's bitemporal record model (<code>effective_from/effective_to</code> +
+        <code>known_from/known_to</code> + correction/supersession relationship). Checked
+        <code>products/riskos/src/riskos/domain/entities.py</code>: every aggregate in this slice
+        (<code>LegalEntityMasterVersion</code>, <code>NettingSetVersion</code>, <code>PortfolioSnapshot</code>,
+        <code>CollateralStatePackage</code>, <code>CalculationRun</code>, ...) is an immutable versioned snapshot
+        with at most an <code>effective_from</code>/<code>effective_to</code> pair &mdash; none carries the
+        <code>known_from</code>/<code>known_to</code> "when the system possessed that version" dimension plan
+        8.3 requires for a true "known then vs. corrected now" replay. Building this page against the data that
+        exists today would mean fabricating a second timeline; this page is a placeholder instead until that
+        backend capability is implemented.
+      </div>
+    </section>
+
+    <!-- ============================== EVIDENCE EXPORT ============================== -->
+    <section class="panel" id="panel-export">
+      <h2>Evidence export</h2>
+      <div class="note">Exports a signed, hash-chained result package (<code>cassandre_contracts.Envelope</code>) for a completed calculation run.</div>
+      <form id="form-export" class="inline">
+        <label>Run ID <input name="run_id" placeholder="SIM-RUN-UI-0001" required /></label>
+        <button class="action" type="submit">POST /v1/result-packages:export</button>
+      </form>
+      <div id="result-export" class="result-box" hidden></div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

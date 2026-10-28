@@ -1,0 +1,28 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-008",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": true,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "The amendment document narrows eligible collateral to Cash USD only; the ground-truth eligible_collateral tuple reflects the post-amendment set, and amendment precedence over the original CSA is itself a material, maker-checker-approved term (plan Section 10.5: 'amendment precedence').",
+    "notification_deadline_business_days": 2,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": "500000.00",
+    "threshold_counterparty": "500000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "89df3f0268deecf65717307377bbcd69c238e9f70e6780a9f33f30ce3f786de2"
+}

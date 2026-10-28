@@ -1,0 +1,33 @@
+{
+  "$id": "https://cassandre.sim/schemas/public/money.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "amount": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Amount"
+    },
+    "currency": {
+      "title": "Currency",
+      "type": "string"
+    },
+    "rounding_context": {
+      "title": "Rounding Context",
+      "type": "string"
+    }
+  },
+  "required": [
+    "amount",
+    "currency",
+    "rounding_context"
+  ],
+  "title": "Money",
+  "type": "object"
+}

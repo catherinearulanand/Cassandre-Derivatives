@@ -1,0 +1,28 @@
+{
+  "$id": "https://cassandre.sim/schemas/public/quantity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "amount": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+          "type": "string"
+        }
+      ],
+      "title": "Amount"
+    },
+    "unit": {
+      "title": "Unit",
+      "type": "string"
+    }
+  },
+  "required": [
+    "amount",
+    "unit"
+  ],
+  "title": "Quantity",
+  "type": "object"
+}

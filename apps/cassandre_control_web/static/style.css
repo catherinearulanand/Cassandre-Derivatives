@@ -1,0 +1,224 @@
+/* Cassandre control (federation layer) UI. Internal tooling: functional, not polished. */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #f4f5f7;
+  color: #1a1a1a;
+}
+
+header {
+  background: #2d1b4d;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #cbb8e8;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  background: #3a2361;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #dccdf2;
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+nav button:hover {
+  background: #452b73;
+}
+
+nav button.active {
+  color: #fff;
+  border-bottom: 3px solid #b083f0;
+  background: #452b73;
+}
+
+main {
+  padding: 16px 20px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: none;
+  background: #fff;
+  border: 1px solid #dde1e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.panel .note {
+  font-size: 12px;
+  color: #666;
+  background: #f7f8fa;
+  border-left: 3px solid #9aa5b8;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+form.wide {
+  grid-template-columns: 1fr;
+}
+
+label {
+  font-size: 11px;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid #c9ccd3;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 140px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+}
+
+button.action {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: #5a2ea6;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button.action:hover {
+  background: #46237f;
+}
+
+button.action.secondary {
+  background: #6b7280;
+}
+
+button.action.secondary:hover {
+  background: #52565c;
+}
+
+.result-box {
+  background: #14101f;
+  color: #e6d8ff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.result-box.error {
+  background: #3a0f14;
+  color: #ffd6d6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+th, td {
+  border: 1px solid #e2e5eb;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f0f2f6;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge.ok { background: #d9f2df; color: #1a5c2b; }
+.badge.bad { background: #fbdede; color: #7c1c1c; }
+.badge.warn { background: #fdf0d0; color: #7a5300; }
+
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.reasons-list li {
+  background: #fbdede;
+  color: #7c1c1c;
+  padding: 4px 8px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 11px;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.toggle-link {
+  font-size: 11px;
+  color: #5a2ea6;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CollateralOS Control UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CollateralOS &mdash; internal control workflow</h1>
+    <p>Synthetic SIM-* data only. Every action below calls the real CollateralOS API (no mocked data). Not a production UI.</p>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="obligations" class="active">Obligation queue</button>
+    <button data-tab="inventory">Inventory freshness</button>
+    <button data-tab="eligibility">Eligibility matrix</button>
+    <button data-tab="planner">Planner results</button>
+    <button data-tab="rejected">Rejected assets</button>
+    <button data-tab="reservation">Reservation / conflict</button>
+    <button data-tab="approval">Maker/checker approval</button>
+    <button data-tab="preflight">Preflight checklist</button>
+    <button data-tab="export">Export history</button>
+    <button data-tab="settlement">Settlement lifecycle</button>
+    <button data-tab="counterfactual">Counterfactual analysis</button>
+  </nav>
+
+  <main>
+
+    <!-- ============================== OBLIGATION QUEUE ============================== -->
+    <section class="panel active" id="panel-obligations">
+      <h2>Obligation queue</h2>
+      <div class="note">
+        The API has no <code>GET /v1/obligations</code> list endpoint (COL-001 is create-only). This table is a
+        session-local log of obligations this browser tab has submitted &mdash; not a server-side queue.
+      </div>
+      <form id="form-obligation">
+        <label>Obligation ID <input name="obligation_id" placeholder="SIM-OBL-0001" required /></label>
+        <label>Counterparty ID <input name="counterparty_id" placeholder="SIM-CPTY-0001" required /></label>
+        <label>Entity ID <input name="entity_id" placeholder="SIM-ENTITY-CASSANDRE-BANK-NA" required /></label>
+        <label>Agreement ID <input name="agreement_id" placeholder="SIM-AGMT-0001" required /></label>
+        <label>Direction
+          <select name="direction">
+            <option value="BANK_DELIVERS" selected>BANK_DELIVERS</option>
+            <option value="COUNTERPARTY_DELIVERS">COUNTERPARTY_DELIVERS (not implemented by this slice)</option>
+          </select>
+        </label>
+        <label>Amount <input name="amount_amount" placeholder="1000000.00" required /></label>
+        <label>Currency <input name="amount_currency" placeholder="USD" value="USD" required /></label>
+        <label>Due at (UTC) <input name="due_at" type="datetime-local" required /></label>
+        <label>Source <input name="source" placeholder="SIM-SOURCE-MARGIN-CALL" required /></label>
+        <label>Version <input name="version" value="v1" /></label>
+        <label>Status
+          <select name="status">
+            <option value="VALIDATED" selected>VALIDATED</option>
+          </select>
+        </label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/obligations</button>
+      </form>
+      <div id="result-obligation" class="result-box" hidden></div>
+      <table id="table-obligations">
+        <thead><tr><th>obligation_id</th><th>status</th><th>version</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== INVENTORY FRESHNESS ============================== -->
+    <section class="panel" id="panel-inventory">
+      <h2>Inventory freshness and reconciliation</h2>
+      <div class="note">
+        The API has no list/reconciliation endpoint either &mdash; only <code>POST /v1/inventory-snapshots</code>
+        (COL-002/003). This page submits a snapshot and keeps a session log. Staleness/encumbrance/recall flags for a
+        given position only become visible once a plan is run against the snapshot (see "Eligibility matrix" and
+        "Rejected assets" tabs, which read them from the plan's independent-verifier evidence).
+      </div>
+      <div class="row-actions">
+        <button class="action secondary" id="btn-load-snapshot-example" type="button">Load example positions JSON</button>
+      </div>
+      <form id="form-snapshot" class="wide">
+        <label>Snapshot ID <input name="snapshot_id" placeholder="SIM-SNAP-0001" required /></label>
+        <label>Version <input name="version" value="v1" /></label>
+        <label>As-of (UTC) <input name="as_of" type="datetime-local" required /></label>
+        <label>Positions (JSON array of position objects)
+          <textarea name="positions_json" required></textarea>
+        </label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/inventory-snapshots</button>
+      </form>
+      <div id="result-snapshot" class="result-box" hidden></div>
+      <table id="table-snapshots">
+        <thead><tr><th>snapshot_id</th><th>version</th><th>position_count</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== ELIGIBILITY MATRIX ============================== -->
+    <section class="panel" id="panel-eligibility">
+      <h2>Eligibility matrix and rule evidence</h2>
+      <div class="note">
+        There is no standalone eligibility-preview endpoint in this slice. This matrix is derived from
+        <code>GET /v1/plans/&#123;plan_id&#125;/evidence</code>'s <code>verifier_notes</code>, which record every
+        position the independent verifier rejected and its full ordered reason list &mdash; never a bare boolean
+        (plan Section 12.3). Run a plan first (Planner results tab), then look it up here.
+      </div>
+      <form id="form-eligibility">
+        <label>Plan ID <input name="plan_id" placeholder="SIM-PLAN-0001" required /></label>
+        <button class="action" type="submit">GET /v1/plans/&#123;plan_id&#125;/evidence</button>
+      </form>
+      <div id="result-eligibility-raw" class="result-box" hidden></div>
+      <table id="table-eligibility">
+        <thead><tr><th>position_id (or violation)</th><th>rejection reasons</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== PLANNER RESULTS ============================== -->
+    <section class="panel" id="panel-planner">
+      <h2>Planner results: feasibility and gap</h2>
+      <form id="form-plan-create">
+        <label>Plan ID <input name="plan_id" placeholder="SIM-PLAN-0001" required /></label>
+        <label>Obligation ID <input name="obligation_id" placeholder="SIM-OBL-0001" required /></label>
+        <label>Policy ID <input name="policy_id" placeholder="from Policy activate step" required /></label>
+        <label>Snapshot ID <input name="snapshot_id" placeholder="SIM-SNAP-0001" required /></label>
+        <label>As-of (UTC) <input name="as_of" type="datetime-local" required /></label>
+        <label>Existing held total <input name="existing_held_total" value="0" /></label>
+        <label>Existing held by issuer group (JSON object, optional)
+          <input name="existing_held_by_issuer_group" placeholder="{}" value="{}" />
+        </label>
+        <label>Cost rate by position (JSON object, optional)
+          <input name="cost_rate_by_position" placeholder="leave blank for none" />
+        </label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/plans</button>
+      </form>
+
+      <hr />
+      <p><strong>Policy bundle helper</strong> &mdash; a plan needs an ACTIVE policy_id. This slice only ships one
+        provisional bundle (<code>SIM-POLICY-001</code>, per DEC-COL-01); validate then activate it here.</p>
+      <div class="row-actions">
+        <button class="action secondary" id="btn-validate-policy" type="button">POST /v1/policy-bundles:validate</button>
+        <input id="input-activate-policy-id" placeholder="policy_id to activate" />
+        <button class="action secondary" id="btn-activate-policy" type="button">POST /v1/policy-bundles/&#123;id&#125;:activate</button>
+      </div>
+      <div id="result-policy" class="result-box" hidden></div>
+
+      <hr />
+      <form id="form-plan-lookup">
+        <label>Plan ID to look up <input name="plan_id" placeholder="SIM-PLAN-0001" required /></label>
+        <button class="action" type="submit">GET /v1/plans/&#123;plan_id&#125;</button>
+      </form>
+      <div id="result-plan" class="result-box" hidden></div>
+      <table id="table-plans">
+        <thead><tr><th>plan_id</th><th>status (closed vocabulary)</th><th>method</th><th>objective</th><th>gap %</th><th>verified</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== REJECTED ASSETS ============================== -->
+    <section class="panel" id="panel-rejected">
+      <h2>Rejected assets and infeasibility diagnosis</h2>
+      <div class="note">
+        Same evidence source as the eligibility matrix: <code>verifier_notes</code> from
+        <code>GET /v1/plans/&#123;plan_id&#125;/evidence</code>. This view instead groups by violation category
+        (ineligible position, exceeds available inventory, minimum-lot violation, concentration cap, insufficient
+        coverage, solver-level infeasibility) so an infeasible plan's root cause is legible at a glance.
+      </div>
+      <form id="form-rejected">
+        <label>Plan ID <input name="plan_id" placeholder="SIM-PLAN-0001" required /></label>
+        <button class="action" type="submit">Diagnose</button>
+      </form>
+      <div id="result-rejected-status"></div>
+      <div id="result-rejected-groups"></div>
+    </section>
+
+    <!-- ============================== RESERVATION / CONFLICT ============================== -->
+    <section class="panel" id="panel-reservation">
+      <h2>Reservation / conflict view</h2>
+      <form id="form-reserve">
+        <label>Plan ID <input name="plan_id" placeholder="SIM-PLAN-0001" required /></label>
+        <label>Reservation ID <input name="reservation_id" placeholder="SIM-RSV-0001" required /></label>
+        <label>Instruction ID <input name="instruction_id" placeholder="SIM-INSTR-0001" required /></label>
+        <label>TTL minutes (optional) <input name="ttl_minutes" type="number" placeholder="15" /></label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/plans/&#123;plan_id&#125;:reserve</button>
+      </form>
+      <div id="result-reserve" class="result-box" hidden></div>
+      <div id="result-reserve-conflict" hidden></div>
+      <table id="table-reservations">
+        <thead><tr><th>reservation_id</th><th>plan_id</th><th>status</th><th>expires_at</th><th>instruction_id</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== MAKER/CHECKER APPROVAL ============================== -->
+    <section class="panel" id="panel-approval">
+      <h2>Maker/checker approval</h2>
+      <div class="note">Maker and checker must be different actors (self-approval is rejected with 422 <code>SELF_APPROVAL_REJECTED</code>); a plan-binding change between the two steps fails closed with 409 <code>APPROVAL_INVALIDATED</code>.</div>
+      <form id="form-maker-approve">
+        <label>Reservation ID <input name="reservation_id" placeholder="SIM-RSV-0001" required /></label>
+        <label>Maker ID <input name="maker_id" placeholder="SIM-USER-MAKER-0001" required /></label>
+        <button class="action" type="submit">POST .../&#123;reservation_id&#125;:maker-approve</button>
+      </form>
+      <div id="result-maker-approve" class="result-box" hidden></div>
+
+      <form id="form-checker-approve">
+        <label>Reservation ID <input name="reservation_id" placeholder="SIM-RSV-0001" required /></label>
+        <label>Checker ID <input name="checker_id" placeholder="SIM-USER-CHECKER-0001" required /></label>
+        <button class="action" type="submit">POST .../&#123;reservation_id&#125;:checker-approve</button>
+      </form>
+      <div id="result-checker-approve" class="result-box" hidden></div>
+    </section>
+
+    <!-- ============================== PREFLIGHT ============================== -->
+    <section class="panel" id="panel-preflight">
+      <h2>Preflight checklist</h2>
+      <form id="form-preflight">
+        <label>Instruction ID <input name="instruction_id" placeholder="SIM-INSTR-0001" required /></label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/instructions/&#123;instruction_id&#125;:preflight</button>
+      </form>
+      <div id="result-preflight"></div>
+    </section>
+
+    <!-- ============================== EXPORT HISTORY ============================== -->
+    <section class="panel" id="panel-export">
+      <h2>Export history</h2>
+      <div class="note">
+        <code>export-internal</code> is idempotent: the same <code>idempotency_key</code> + same request body replays
+        the prior result; the same key with a different body is refused (409). Nothing here is transmitted anywhere
+        &mdash; every exported record carries <code>transmitted: false</code> and an explicit conformance-scope note
+        (ADR-012). This table is this browser session's export log; the API has no export-history list endpoint.
+      </div>
+      <form id="form-export" class="wide">
+        <label>Instruction ID <input name="instruction_id" placeholder="SIM-INSTR-0001" required /></label>
+        <label>Idempotency key <input name="idempotency_key" placeholder="SIM-IDEMPOTENCY-0001" required /></label>
+        <label>Actor ID <input name="actor_id" value="SIM-USER-API-0001" /></label>
+        <button class="action" type="submit">POST /v1/instructions/&#123;instruction_id&#125;:export-internal</button>
+      </form>
+      <div id="result-export" class="result-box" hidden></div>
+      <table id="table-exports">
+        <thead><tr><th>instruction_id</th><th>object_id</th><th>content_hash</th><th>transmitted</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ============================== SETTLEMENT LIFECYCLE (PLACEHOLDER) ============================== -->
+    <section class="panel" id="panel-settlement">
+      <h2>Simulated settlement lifecycle</h2>
+      <div class="placeholder">
+        <strong>Not yet implemented.</strong> Plan Section 12.9 lists a simulated settlement lifecycle (post-export
+        acknowledgement/match/settlement events) as a CollateralOS UI page. Checked
+        <code>products/collateralos/src/collateralos/domain/settlement.py</code> and the rest of
+        <code>products/collateralos/src/collateralos/</code>: this S1 slice defines only
+        <code>SettlementInstruction</code> and <code>SettlementPreflight</code> (preflight + idempotent
+        export-internal, COL-012/013). There is no settlement-transport component and no post-export event model
+        (ADR-012: "no settlement transport component is present in the pilot build"). This page is a placeholder
+        rather than fabricated events, and will be built once that backend slice exists.
+      </div>
+    </section>
+
+    <!-- ============================== COUNTERFACTUAL ANALYSIS (PLACEHOLDER) ============================== -->
+    <section class="panel" id="panel-counterfactual">
+      <h2>Counterfactual analysis and audit export</h2>
+      <div class="placeholder">
+        <strong>Not yet implemented.</strong> There is no counterfactual re-solve endpoint or capability anywhere in
+        <code>products/collateralos/src/collateralos/</code> or <code>apps/collateralos_api</code> (no "what if this
+        position were excluded / this policy were different" re-planning entry point). Building a real counterfactual
+        view without that backend capability would mean fabricating re-solve results, which this UI does not do. This
+        page is a placeholder until the counterfactual re-solve capability is implemented; the existing
+        <a href="#" data-tab-link="export">export history</a> and <a href="#" data-tab-link="eligibility">plan
+        evidence</a> pages already provide the (non-counterfactual) audit trail that does exist today.
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+[project]
+name = "cassandre-platform"
+version = "0.1.0"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "money_types",
+  "audit_protocol",
+  "cassandre_contracts",
+  "cassandre_security",
+  "simulation_factory",
+  "clauseos",
+  "riskos",
+  "collateralos",
+  "clauseos_api",
+  "riskos_api",
+  "collateralos_api",
+  "cassandre_control_api",
+  "cassandre_marketing_web",
+]
+
+[tool.uv]
+# Scoped to this project only (not a global env var) so uv's package cache
+# never lands back on C: for this repo, without changing cache behavior for
+# any other project on this machine. See docs/adr/ADR-002 known-gap note.
+cache-dir = "D:/uv-cache"
+
+[tool.uv.workspace]
+members = [
+  "packages/*",
+  "products/*",
+  "apps/clauseos_api",
+  "apps/riskos_api",
+  "apps/collateralos_api",
+  "apps/cassandre_control_api",
+  "apps/cassandre_marketing_web",
+]
+
+[tool.uv.sources]
+money_types = { workspace = true }
+audit_protocol = { workspace = true }
+cassandre_contracts = { workspace = true }
+cassandre_security = { workspace = true }
+simulation_factory = { workspace = true }
+clauseos = { workspace = true }
+riskos = { workspace = true }
+collateralos = { workspace = true }
+clauseos_api = { workspace = true }
+riskos_api = { workspace = true }
+collateralos_api = { workspace = true }
+cassandre_control_api = { workspace = true }
+cassandre_marketing_web = { workspace = true }
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "hypothesis>=6.100",
+  "httpx>=0.27",
+  "ruff>=0.6",
+  "mypy>=1.11",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["packages", "products", "apps", "tests"]
+pythonpath = ["."]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+line-length = 100

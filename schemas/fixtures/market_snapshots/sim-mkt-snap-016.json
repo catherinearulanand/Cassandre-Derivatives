@@ -1,0 +1,108 @@
+{
+  "as_of": "2026-01-21T17:00:00Z",
+  "discount_factors": [
+    {
+      "currency": "USD",
+      "discount_factor": "0.993479",
+      "tenor": "1M",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.980681",
+      "tenor": "3M",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.962094",
+      "tenor": "6M",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.926956",
+      "tenor": "1Y",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.863856",
+      "tenor": "2Y",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.717360",
+      "tenor": "5Y",
+      "zero_rate": "0.0788"
+    },
+    {
+      "currency": "USD",
+      "discount_factor": "0.559284",
+      "tenor": "10Y",
+      "zero_rate": "0.0788"
+    }
+  ],
+  "freshness_policy": {
+    "max_age_hours": 24,
+    "stale_after": "2026-01-22T17:00:00Z"
+  },
+  "fx_quotes": [
+    {
+      "quote_direction": "target_per_source",
+      "rate": "1.089720",
+      "rounding_rule": "ROUND_HALF_UP",
+      "rounding_stage": "POST_CONVERSION",
+      "source_currency": "EUR",
+      "source_snapshot_hash": "7c34a55bfce9e3be46d1beb17245509aecef7a4affd9b9bb783e2927546f012c",
+      "target_currency": "USD",
+      "valuation_time": "2026-01-21T17:00:00Z"
+    },
+    {
+      "quote_direction": "target_per_source",
+      "rate": "1.256472",
+      "rounding_rule": "ROUND_HALF_UP",
+      "rounding_stage": "POST_CONVERSION",
+      "source_currency": "GBP",
+      "source_snapshot_hash": "6fa831444c259defa781ebb963192ec6053396c87b04cb4a03a26ed6b4802923",
+      "target_currency": "USD",
+      "valuation_time": "2026-01-21T17:00:00Z"
+    },
+    {
+      "quote_direction": "target_per_source",
+      "rate": "0.006708",
+      "rounding_rule": "ROUND_HALF_UP",
+      "rounding_stage": "POST_CONVERSION",
+      "source_currency": "JPY",
+      "source_snapshot_hash": "e93a65b59a4e959599efb72b60c5b646bcce9dcdfb78d48fa683a7d545f94b2a",
+      "target_currency": "USD",
+      "valuation_time": "2026-01-21T17:00:00Z"
+    },
+    {
+      "quote_direction": "target_per_source",
+      "rate": "0.011838",
+      "rounding_rule": "ROUND_HALF_UP",
+      "rounding_stage": "POST_CONVERSION",
+      "source_currency": "INR",
+      "source_snapshot_hash": "cf3dfafc709591dffa2b4d468f69a1584b41cde0a767e9481625ead4d93aef7c",
+      "target_currency": "USD",
+      "valuation_time": "2026-01-21T17:00:00Z"
+    }
+  ],
+  "negative_case": {
+    "has_crossed_market": false,
+    "has_missing_quote": false,
+    "is_stale": false,
+    "notes": "no deliberate data-quality issue"
+  },
+  "provenance": {
+    "generator_version": "1.0.0",
+    "is_simulated": true,
+    "scenario_id": "SIM-SCENARIO-CORPUS-MARKET"
+  },
+  "regime": "RATE_SHOCK",
+  "snapshot_id": "SIM-MKT-SNAP-016",
+  "source_label": "SIMULATED",
+  "timezone": "UTC"
+}

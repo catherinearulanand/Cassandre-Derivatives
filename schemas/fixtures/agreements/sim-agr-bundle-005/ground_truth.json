@@ -1,0 +1,29 @@
+{
+  "bundle_id": "SIM-AGR-BUNDLE-005",
+  "ground_truth": {
+    "amendment_overrides_eligible_collateral": false,
+    "calculation_party": "Party A",
+    "counterparty": "Party B",
+    "eligible_collateral": [
+      "CASH_USD",
+      "CASH_EUR"
+    ],
+    "expected_bundle_status": "ANALYZED",
+    "has_conflicting_clauses": false,
+    "independent_amount": "0.00",
+    "minimum_transfer_amount": "50000.00",
+    "missing_incorporated_document": false,
+    "mta_currency": "USD",
+    "notes": "There is a second, EUR 45000.00 MTA for EUR transfers; the ground truth here records the USD-transfer MTA as the primary calculable value and the EUR figure only in notes, since call_currency for this bundle's calculable scenario is USD.",
+    "notification_deadline_business_days": 2,
+    "rating_contingent_threshold": false,
+    "rating_state_known": true,
+    "rounding_order": "MTA_BEFORE_ROUNDING",
+    "side_letter_changes_notification": false,
+    "threshold_calculation_party": "500000.00",
+    "threshold_counterparty": "500000.00",
+    "threshold_currency": "USD",
+    "wrong_way_issuer_exclusion": false
+  },
+  "ground_truth_content_hash": "9dd40666c3f74fbd55e060def97f838aee89a1c60c6765f7c47869c4a9fc1de7"
+}

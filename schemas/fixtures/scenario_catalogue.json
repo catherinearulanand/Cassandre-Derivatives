@@ -1,0 +1,146 @@
+[
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "RiskOS returns no transfer; CollateralOS records no action",
+    "inventory_trap_type": null,
+    "market_regime": "QUIET",
+    "name": "Quiet/no call",
+    "scenario_id": "SIM-SCENARIO-001",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Verified allocation, reservation, approval, preflight, export",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Delivery by bank",
+    "scenario_id": "SIM-SCENARIO-002",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Determine holding/title arrangement; release only collateral the bank holds/controls under approved return rule; substitutions use delivery-before-release",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Return owed by simulation bank",
+    "scenario_id": "SIM-SCENARIO-003",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Record receivable call, validate inbound proposed assets and internal instruction data, simulate match/receipt, reconcile held balance; never optimise bank outbound inventory",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Counterparty owes simulation bank",
+    "scenario_id": "SIM-SCENARIO-004",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": "ratings-contingent threshold with missing current state",
+    "expected_control_behavior": "ClauseOS returns external state required; no derived active threshold",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Ratings event unknown",
+    "scenario_id": "SIM-SCENARIO-005",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": "conflicting clauses requiring review",
+    "expected_control_behavior": "Publication blocked",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Agreement conflict",
+    "scenario_id": "SIM-SCENARIO-006",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "RiskOS rejects affected purpose or batch according to explicit policy",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Unsupported option trade",
+    "scenario_id": "SIM-SCENARIO-007",
+    "trade_trap_type": "UNSUPPORTED_PRODUCT"
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Calculation or plan non-actionable",
+    "inventory_trap_type": "STALE_PRICE",
+    "market_regime": null,
+    "name": "Stale market/inventory",
+    "scenario_id": "SIM-SCENARIO-008",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Asset excluded with exact rule evidence",
+    "inventory_trap_type": "WRONG_WAY",
+    "market_regime": null,
+    "name": "Wrong-way cheapest asset",
+    "scenario_id": "SIM-SCENARIO-009",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "LP preview differs; verified MIP plan governs",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "LP feasible/MIP discrete",
+    "scenario_id": "SIM-SCENARIO-010",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Solver evidence and operational diagnosis; no fabricated plan",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Infeasible inventory",
+    "scenario_id": "SIM-SCENARIO-011",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "One reservation wins; conflicts replan",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Parallel calls",
+    "scenario_id": "SIM-SCENARIO-012",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Approval invalidated",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Approval-after-change",
+    "scenario_id": "SIM-SCENARIO-013",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Settlement preflight fails",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Cutoff passed",
+    "scenario_id": "SIM-SCENARIO-014",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Idempotency prevents second export",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Duplicate export",
+    "scenario_id": "SIM-SCENARIO-015",
+    "trade_trap_type": null
+  },
+  {
+    "agreement_coverage_item": null,
+    "expected_control_behavior": "Verification fails at altered event",
+    "inventory_trap_type": null,
+    "market_regime": null,
+    "name": "Audit tampering",
+    "scenario_id": "SIM-SCENARIO-016",
+    "trade_trap_type": null
+  }
+]

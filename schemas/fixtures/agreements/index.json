@@ -1,0 +1,196 @@
+[
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-001",
+    "coverage_item": "straightforward threshold/MTA",
+    "documents": [
+      "sim-agr-bundle-001_csa.md"
+    ],
+    "family": "SIM-FAMILY-BILATERAL-USD-CSA-MTA-BEFORE-ROUNDING",
+    "ground_truth_content_hash": "633a668ace62d3a333dc822ffe2f69211e2fb8c430f148a7164b13e6ba31bec3",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": true,
+    "title": "Straightforward Threshold and MTA"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-002",
+    "coverage_item": "zero threshold",
+    "documents": [
+      "sim-agr-bundle-002_csa.md"
+    ],
+    "family": "SIM-FAMILY-BILATERAL-USD-CSA-MTA-BEFORE-ROUNDING",
+    "ground_truth_content_hash": "1e80f8c777e37bb776e4d367558c11b1621ce9ed57bf7adbb6c3385d1b7778a9",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": true,
+    "title": "Zero Threshold"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-003",
+    "coverage_item": "asymmetric bilateral thresholds",
+    "documents": [
+      "sim-agr-bundle-003_csa.md"
+    ],
+    "family": "SIM-FAMILY-BILATERAL-USD-CSA-MTA-BEFORE-ROUNDING",
+    "ground_truth_content_hash": "d1c4911a50b0efabb7f212cf7b50f0635f0961c103016a685351ada52f671548",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": true,
+    "title": "Asymmetric Bilateral Thresholds"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-004",
+    "coverage_item": "ratings-contingent threshold with missing current state",
+    "documents": [
+      "sim-agr-bundle-004_csa.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "7ae66c82ed05916f750753e48579ba37974f8b9a3a74236dc9f487de60471b09",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Ratings-Contingent Threshold, Current State Missing"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-005",
+    "coverage_item": "currency-specific MTA",
+    "documents": [
+      "sim-agr-bundle-005_csa.md"
+    ],
+    "family": "SIM-FAMILY-BILATERAL-USD-CSA-MTA-BEFORE-ROUNDING",
+    "ground_truth_content_hash": "9dd40666c3f74fbd55e060def97f838aee89a1c60c6765f7c47869c4a9fc1de7",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": true,
+    "title": "Currency-Specific Minimum Transfer Amount"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-006",
+    "coverage_item": "MTA-before-rounding",
+    "documents": [
+      "sim-agr-bundle-006_csa.md"
+    ],
+    "family": "SIM-FAMILY-BILATERAL-USD-CSA-MTA-BEFORE-ROUNDING",
+    "ground_truth_content_hash": "4c225b0faef0f65e15e96a012560147aeabf05c790a5ea3627830084f2ffa998",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": true,
+    "title": "MTA Before Rounding (Explicit Election)"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-007",
+    "coverage_item": "rounding-before-MTA where expressly elected",
+    "documents": [
+      "sim-agr-bundle-007_csa.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "c777d2b13da00e1766c893b6d02d346b7788b1b3c0f24eeac609820c93885e50",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Rounding Before MTA (Expressly Elected)"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-008",
+    "coverage_item": "amendment overriding eligible collateral",
+    "documents": [
+      "sim-agr-bundle-008_csa.md",
+      "sim-agr-bundle-008_amendment_001.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "89df3f0268deecf65717307377bbcd69c238e9f70e6780a9f33f30ce3f786de2",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Amendment Overriding Eligible Collateral"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-009",
+    "coverage_item": "side letter changing notification deadline",
+    "documents": [
+      "sim-agr-bundle-009_csa.md",
+      "sim-agr-bundle-009_side_letter.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "8c0718096b8152fa421950a4bd50ed268df96f575017671ad718bce42c9db64c",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Side Letter Changing Notification Deadline"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-010",
+    "coverage_item": "conflicting clauses requiring review",
+    "documents": [
+      "sim-agr-bundle-010_csa.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "7f7342338968124fd47548d136df244daecb397559db188105d569837ef010ff",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Conflicting Clauses Requiring Review"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-011",
+    "coverage_item": "missing incorporated document causing BUNDLE_INCOMPLETE",
+    "documents": [
+      "sim-agr-bundle-011_csa.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "5399120885c48450134879243e39014c99ebcb221dcc2c26b57a4f4a64298ab0",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Missing Incorporated Document"
+  },
+  {
+    "bundle_id": "SIM-AGR-BUNDLE-012",
+    "coverage_item": "wrong-way issuer exclusion and concentration rules",
+    "documents": [
+      "sim-agr-bundle-012_csa.md"
+    ],
+    "family": null,
+    "ground_truth_content_hash": "595f806d3d2de3a632976b5d583cc555bd453dfb3f660d6b2054f8182ec5adab",
+    "provenance": {
+      "generator_version": "1.0.0",
+      "is_simulated": true,
+      "scenario_id": "SIM-SCENARIO-CORPUS-AGREEMENTS"
+    },
+    "riskos_calculable": false,
+    "title": "Wrong-Way Issuer Exclusion and Concentration"
+  }
+]

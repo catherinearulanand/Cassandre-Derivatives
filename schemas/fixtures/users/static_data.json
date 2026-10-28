@@ -1,0 +1,365 @@
+{
+  "calendars": [
+    {
+      "calendar_id": "SIM-CAL-USD",
+      "currency": "USD",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-12-25"
+      ],
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "weekend_days": [
+        "SATURDAY",
+        "SUNDAY"
+      ]
+    },
+    {
+      "calendar_id": "SIM-CAL-EUR",
+      "currency": "EUR",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-12-25"
+      ],
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "weekend_days": [
+        "SATURDAY",
+        "SUNDAY"
+      ]
+    },
+    {
+      "calendar_id": "SIM-CAL-GBP",
+      "currency": "GBP",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-12-25"
+      ],
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "weekend_days": [
+        "SATURDAY",
+        "SUNDAY"
+      ]
+    },
+    {
+      "calendar_id": "SIM-CAL-JPY",
+      "currency": "JPY",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-12-25"
+      ],
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "weekend_days": [
+        "SATURDAY",
+        "SUNDAY"
+      ]
+    },
+    {
+      "calendar_id": "SIM-CAL-INR",
+      "currency": "INR",
+      "holiday_dates": [
+        "2026-01-01",
+        "2026-12-25"
+      ],
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "weekend_days": [
+        "SATURDAY",
+        "SUNDAY"
+      ]
+    }
+  ],
+  "custody_accounts": [
+    {
+      "account_id": "SIM-ACCT-HOUSE-001",
+      "account_type": "HOUSE_CUSTODY",
+      "currency": "USD",
+      "custodian_name": "SIM Custodian Depository 01",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-NA",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-002",
+      "account_type": "HOUSE_CUSTODY",
+      "currency": "EUR",
+      "custodian_name": "SIM Custodian Depository 02",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-NA",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-003",
+      "account_type": "HOUSE_CUSTODY",
+      "currency": "GBP",
+      "custodian_name": "SIM Custodian Depository 03",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-NA",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-004",
+      "account_type": "HOUSE_CUSTODY",
+      "currency": "JPY",
+      "custodian_name": "SIM Custodian Depository 04",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-NA",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-005",
+      "account_type": "HOUSE_CUSTODY",
+      "currency": "INR",
+      "custodian_name": "SIM Custodian Depository 05",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-NA",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    },
+    {
+      "account_id": "SIM-ACCT-AFFILIATE-001",
+      "account_type": "AFFILIATE_CUSTODY",
+      "currency": "USD",
+      "custodian_name": "SIM Custodian Depository 06",
+      "owner_entity_id": "SIM-ENTITY-CASSANDRE-BANK-IFSC",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      }
+    }
+  ],
+  "ssis": [
+    {
+      "account_id": "SIM-ACCT-HOUSE-001",
+      "currency": "USD",
+      "custodian_bic_shaped_id": "SIM-BIC-001XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-USD-001",
+      "ssi_id": "SIM-SSI-001"
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-002",
+      "currency": "EUR",
+      "custodian_bic_shaped_id": "SIM-BIC-002XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-EUR-002",
+      "ssi_id": "SIM-SSI-002"
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-003",
+      "currency": "GBP",
+      "custodian_bic_shaped_id": "SIM-BIC-003XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-GBP-003",
+      "ssi_id": "SIM-SSI-003"
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-004",
+      "currency": "JPY",
+      "custodian_bic_shaped_id": "SIM-BIC-004XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-JPY-004",
+      "ssi_id": "SIM-SSI-004"
+    },
+    {
+      "account_id": "SIM-ACCT-HOUSE-005",
+      "currency": "INR",
+      "custodian_bic_shaped_id": "SIM-BIC-005XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-INR-005",
+      "ssi_id": "SIM-SSI-005"
+    },
+    {
+      "account_id": "SIM-ACCT-AFFILIATE-001",
+      "currency": "USD",
+      "custodian_bic_shaped_id": "SIM-BIC-006XXXX",
+      "effective_from": "2026-01-01",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "settlement_route": "SIM-ROUTE-USD-006",
+      "ssi_id": "SIM-SSI-006"
+    }
+  ],
+  "users": [
+    {
+      "active": true,
+      "display_name": "SIM Ana Clausemaker",
+      "email": "sim.user001@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "clause_maker",
+        "risk_operator"
+      ],
+      "user_id": "SIM-USER-001"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Beto Clausechecker",
+      "email": "sim.user002@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "clause_checker",
+        "inventory_operator"
+      ],
+      "user_id": "SIM-USER-002"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Cleo Termsmaker",
+      "email": "sim.user003@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "risk_terms_maker",
+        "collateral_maker"
+      ],
+      "user_id": "SIM-USER-003"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Deshi Termschecker",
+      "email": "sim.user004@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "risk_terms_checker",
+        "collateral_checker"
+      ],
+      "user_id": "SIM-USER-004"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Elin Methodowner",
+      "email": "sim.user005@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "risk_method_owner",
+        "static_data_maker"
+      ],
+      "user_id": "SIM-USER-005"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Faro Validator",
+      "email": "sim.user006@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "risk_validator",
+        "static_data_checker"
+      ],
+      "user_id": "SIM-USER-006"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Gita Policymaker",
+      "email": "sim.user007@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "collateral_policy_maker",
+        "auditor"
+      ],
+      "user_id": "SIM-USER-007"
+    },
+    {
+      "active": true,
+      "display_name": "SIM Huan Policychecker",
+      "email": "sim.user008@sim-cassandre-pilot.example",
+      "provenance": {
+        "generator_version": "1.0.0",
+        "is_simulated": true,
+        "scenario_id": "SIM-SCENARIO-CORPUS-STATIC-DATA"
+      },
+      "roles": [
+        "collateral_policy_checker",
+        "pilot_admin"
+      ],
+      "user_id": "SIM-USER-008"
+    }
+  ]
+}

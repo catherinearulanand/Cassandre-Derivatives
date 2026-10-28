@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClauseOS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ClauseOS</h1>
+    <span class="subtitle">contract-review control workflow &middot; internal tool, not production UI</span>
+    <span style="flex:1"></span>
+    <div class="field" style="margin:0">
+      <label>Bundle</label>
+      <select id="bundlePicker" style="min-width:260px"></select>
+    </div>
+    <button class="action secondary" id="refreshBundles" style="margin-bottom:8px">Refresh</button>
+  </header>
+  <nav id="nav"></nav>
+  <main id="main"></main>
+  <footer>
+    ClauseOS internal control-workflow UI. Per plan Section 10.8: this UI never presents a scalar
+    confidence number as proof of anything -- only evidence integrity, bundle completeness,
+    conflicts, proposer (dis)agreement, materiality, and the required next action.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
